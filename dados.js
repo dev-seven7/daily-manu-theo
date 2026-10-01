@@ -9,8 +9,8 @@ const DADOS = {
  "resumo": {
   "atrasados": 36,
   "vencendo": 5,
-  "mencoes": 30,
-  "checks": 50
+  "mencoes": 28,
+  "checks": 49
  },
  "hojeManual": [],
  "hoje": [],
@@ -419,15 +419,6 @@ const DADOS = {
    "g": "ciencia",
    "q": "Gabi",
    "d": "01/10",
-   "t": "TMK · Araruama · Editar criativos · Lançamento Temakeria",
-   "c": "TMK#230",
-   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/230",
-   "n": "🎟️ Cupons de Araruama · criados e confirmados (30/09) @dev-manoela @joaovseven7 @luizamenesesseven7 @Otavioseven7 Resposta da Lini no Sults. Os dois cupons já estão criados e "
-  },
-  {
-   "g": "ciencia",
-   "q": "Gabi",
-   "d": "01/10",
    "t": "TMK · Araruama · Landing de captação + CRM + cupons (hot roll isca + 1ª compra)",
    "c": "TMK#16",
    "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/16",
@@ -486,15 +477,6 @@ const DADOS = {
    "c": "TMK#14",
    "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/14",
    "n": "@dev-manoela 📍 Call Gabi × Clarissa · 29/09/2026 · o Erick ainda não respondeu sobre os influenciadores. Reforçar com ele (Sults + WhatsApp). A janela de entregas continua 05 "
-  },
-  {
-   "g": "ciencia",
-   "q": "Gabi",
-   "d": "30/09",
-   "t": "TMK · Araruama · Brindes + impressos (imã QR, imã 3D, flyer de carro, kit sushi)",
-   "c": "TMK#13",
-   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/13",
-   "n": "@olvgabrielamello @dev-manoela 📍 Call Gabi × Clarissa · 29/09/2026 · a gráfica atrasou por demora do Erick na aprovação. Entrega: 1ª leva na segunda, 05/10, e o restante ao lo"
   },
   {
    "g": "ciencia",
@@ -774,12 +756,6 @@ const DADOS = {
      "c": "TMK#210",
      "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/210",
      "n": "Está fora da lista ativa do board e aberta no GitHub — some das listas de todo mundo. Sem comentário no card."
-    },
-    {
-     "t": "TMK · Araruama · Editar criativos · Lançamento Temakeria",
-     "c": "TMK#230",
-     "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/230",
-     "n": "Está fora da lista ativa do board e aberta no GitHub — some das listas de todo mundo. Último movimento: Gabi em 01/10 — 🎟️ Cupons de Araruama · criados e confirmados (30/09) dev-manoela joaovseven7 luizamenesesseven7 Otavioseven7 Resposta da Lini no Sults. Os"
     },
     {
      "t": "Cotar Brindes Da Inauguração TMK",
