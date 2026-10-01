@@ -110,14 +110,19 @@
 
   <div class="kpis">
     <div class="kpi" onclick="irPara('atrasados')"><b style="color:var(--p0)" id="k1">0</b><span>atrasados</span></div>
-    <div class="kpi" onclick="irPara('vencendo')"><b style="color:var(--p1)" id="k2">0</b><span>vencendo</span></div>
+    <div class="kpi" onclick="irPara('vencendo')"><b style="color:var(--p1)" id="k2">0</b><span>semana que vem</span></div>
     <div class="kpi" onclick="irPara('mencoes')"><b style="color:var(--p2)" id="k3">0</b><span>menções</span></div>
     <div class="kpi" onclick="irPara('checks')"><b style="color:var(--accent)" id="k4">0</b><span id="k4label">checks</span></div>
   </div>
 
   <section id="hoje">
-    <h2>🔴 Para entregar hoje</h2>
+    <h2>✅ Hoje · 01/10 (fechado)</h2>
     <div id="lista-hoje"></div>
+  </section>
+
+  <section id="amanha">
+    <h2>🟣 Amanhã · 02/10</h2>
+    <div id="lista-amanha"></div>
   </section>
 
   <section id="ajustes" style="display:none">
@@ -127,7 +132,7 @@
   </section>
 
   <section id="proximos">
-    <h2>🟠 Próximos dias <span class="count" id="c-prox"></span></h2>
+    <h2>🔵 Segunda-feira · 05/10 <span class="count" id="c-prox"></span></h2>
     <div id="lista-proximos"></div>
   </section>
 
@@ -138,7 +143,7 @@
   </section>
 
   <section id="vencendo">
-    <h2>⏳ Vencendo <span class="count" id="c-venc"></span></h2>
+    <h2>🗓️ Semana que vem · 05 a 09/10 <span class="count" id="c-venc"></span></h2>
     <div id="lista-vencendo"></div>
   </section>
 
@@ -1268,7 +1273,10 @@ $("#c-men").textContent = DADOS.mencoes.length + " pessoas";
 $("#c-chk").textContent = DADOS.resumo.checks + " abertos";
 
 const HOJE = (DADOS.hojeManual||[]).concat(DADOS.hoje||[]);
-$("#lista-hoje").innerHTML = HOJE.map(o=>cardHTML(o,{urgente:true})).join("");
+$("#lista-hoje").innerHTML = HOJE.length ? HOJE.map(o=>cardHTML(o,{urgente:true})).join("") : '<p class="nota">Nada pendente, dia fechado.</p>';
+
+const AMANHA = DADOS.amanha||[];
+$("#lista-amanha").innerHTML = AMANHA.length ? AMANHA.map(o=>cardHTML(o,{urgente:true})).join("") : '<p class="nota">Nada registrado ainda.</p>';
 if(DADOS.ajustes){
   document.getElementById("ajustes").style.display="";
   $("#tit-aj").textContent = DADOS.ajustes.titulo;
