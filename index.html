@@ -1217,7 +1217,7 @@ function cardHTML(o, opts={}){
     o.tag ? `<span class="tag">${esc(o.tag)}</span>` : ""
   ].filter(Boolean).join("");
   return `<div class="card ${opts.urgente?"urgente":""} ${done?"done":""}" data-tag="${o.tag||""}" data-p="${o.p||""}">
-    <input type="checkbox" class="chk" ${done?"checked":""} onchange="toggle(this,'${id}')">
+    <input type="checkbox" class="chk" data-key="${esc(id)}" ${done?"checked":""} onchange="toggle(this)">
     <div class="body">
       <div class="t">${esc(o.t)}</div>
       ${o.n?`<div class="n">${esc(o.n)}</div>`:""}
@@ -1226,7 +1226,8 @@ function cardHTML(o, opts={}){
   </div>`;
 }
 
-function toggle(el,id){
+function toggle(el){
+  const id = el.dataset.key;
   el.closest(".card,.item").classList.toggle("done", el.checked);
   try{ localStorage.setItem(id, el.checked?"1":"0") }catch(e){}
   atualizaProgresso();
@@ -1235,7 +1236,7 @@ function toggle(el,id){
 function itemHTML(o){
   const id = chave(o.t), done = marcado(o.t);
   return `<div class="item ${done?"done":""}">
-    <input type="checkbox" class="chk" ${done?"checked":""} onchange="toggle(this,'${id}')">
+    <input type="checkbox" class="chk" data-key="${esc(id)}" ${done?"checked":""} onchange="toggle(this)">
     <div class="body">
       <div class="t">${esc(o.t)}</div>
       ${o.n?`<div class="n">${esc(o.n)}</div>`:""}
