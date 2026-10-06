@@ -1,0 +1,32 @@
+name: Sync daily
+on:
+  schedule:
+    - cron: "0 11,16 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Sincroniza issues fechadas pra "Feito"
+        env:
+          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
+        run: node .github/scripts/sync-dados.js
+      - name: Commit e push, se mudou algo
+        run: |
+          git config user.name "daily-sync-bot"
+          git config user.email "noreply@dev-seven7.local"
+          if git diff --quiet; then
+            echo "nada mudou"
+          else
+            git add index.html
+            git commit -m "Sync automatico: move issues fechadas pra Feito"
+            git push
+          fi
