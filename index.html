@@ -110,18 +110,23 @@
 
   <div class="kpis">
     <div class="kpi" onclick="irPara('atrasados')"><b style="color:var(--p0)" id="k1">0</b><span>atrasados</span></div>
-    <div class="kpi" onclick="irPara('vencendo')"><b style="color:var(--p1)" id="k2">0</b><span>semana que vem</span></div>
+    <div class="kpi" onclick="irPara('vencendo')"><b style="color:var(--p1)" id="k2">0</b><span>até as férias</span></div>
     <div class="kpi" onclick="irPara('mencoes')"><b style="color:var(--p2)" id="k3">0</b><span>menções</span></div>
     <div class="kpi" onclick="irPara('checks')"><b style="color:var(--accent)" id="k4">0</b><span id="k4label">checks</span></div>
   </div>
 
+  <section id="ferias" style="background:var(--surface);border:1px solid var(--p0);border-radius:12px;padding:16px 18px;margin-bottom:18px;">
+    <h2 style="margin:0 0 6px;">🏖️ Contagem pras férias</h2>
+    <p class="nota" style="margin:0;">Hoje é <b>05/10</b>. Você sai de férias em <b>15/10</b> (faltam 10 dias) e volta em <b>29/10</b>. Tudo de conteúdo e comunicação precisa estar fechado e rodando sozinho até lá.</p>
+  </section>
+
   <section id="hoje">
-    <h2>✅ Hoje · 01/10 (fechado)</h2>
+    <h2>✅ Hoje · 05/10</h2>
     <div id="lista-hoje"></div>
   </section>
 
   <section id="amanha">
-    <h2>🟣 Amanhã · 02/10</h2>
+    <h2>🟣 Amanhã · 06/10</h2>
     <div id="lista-amanha"></div>
   </section>
 
@@ -132,7 +137,7 @@
   </section>
 
   <section id="proximos">
-    <h2>🔵 Segunda-feira · 05/10 <span class="count" id="c-prox"></span></h2>
+    <h2>🔵 Até sexta · 09/10 <span class="count" id="c-prox"></span></h2>
     <div id="lista-proximos"></div>
   </section>
 
@@ -143,8 +148,14 @@
   </section>
 
   <section id="vencendo">
-    <h2>🗓️ Semana que vem · 05 a 09/10 <span class="count" id="c-venc"></span></h2>
+    <h2>🏖️ Antes das férias · até 15/10 <span class="count" id="c-venc"></span></h2>
     <div id="lista-vencendo"></div>
+  </section>
+
+  <section id="duranteFerias">
+    <h2>📆 Durante as férias · 15 a 29/10 <span class="count" id="c-df"></span></h2>
+    <p class="nota">Precisa estar rodando sozinho, delegado, sem depender de você.</p>
+    <div id="lista-duranteFerias"></div>
   </section>
 
   <section id="atrasados">
@@ -1292,6 +1303,9 @@ if(DADOS.novidades && DADOS.novidades.length){
   $("#lista-novidades").innerHTML = DADOS.novidades.map(o=>cardHTML(o)).join("");
 } else { document.getElementById("novidades").style.display="none"; }
 $("#lista-vencendo").innerHTML = DADOS.vencendo.map(o=>cardHTML(o)).join("");
+const DURANTE_FERIAS = DADOS.duranteFerias||[];
+$("#c-df").textContent = DURANTE_FERIAS.length + " cards";
+$("#lista-duranteFerias").innerHTML = DURANTE_FERIAS.length ? DURANTE_FERIAS.map(o=>cardHTML(o)).join("") : '<p class="nota">Nada registrado ainda.</p>';
 $("#lista-atrasados").innerHTML = DADOS.atrasados.map(o=>cardHTML(o)).join("");
 
 const grupos = {entrega:"Entregou e espera seu check", pergunta:"Fez uma pergunta direta", ciencia:"Só precisa da sua ciência"};
