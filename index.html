@@ -117,16 +117,16 @@
 
   <section id="ferias" style="background:var(--surface);border:1px solid var(--p0);border-radius:12px;padding:16px 18px;margin-bottom:18px;">
     <h2 style="margin:0 0 6px;">🏖️ Contagem pras férias</h2>
-    <p class="nota" style="margin:0;">Hoje é <b>13/10</b>. Você sai de férias em <b>15/10</b> (faltam 2 dias) e volta em <b>29/10</b>. Tudo de conteúdo e comunicação precisa estar fechado e rodando sozinho até lá.</p>
+    <p class="nota" style="margin:0;">Hoje é <b>14/10</b>. Você sai de férias na noite de <b>15/10</b> (amanhã é o último dia, presencial com o time) e volta em <b>29/10</b>. Tudo de conteúdo e comunicação precisa estar fechado e rodando sozinho até lá.</p>
   </section>
 
   <section id="hoje">
-    <h2>🟣 Hoje · 13/10</h2>
+    <h2>🟣 Hoje · 14/10</h2>
     <div id="lista-hoje"></div>
   </section>
 
   <section id="amanha">
-    <h2>⚪ Amanhã · 14/10</h2>
+    <h2>⚪ Amanhã · 15/10</h2>
     <div id="lista-amanha"></div>
   </section>
 
@@ -197,9 +197,9 @@
 /* dados embutidos: evita cache do arquivo externo */
 // ✍️ Daily da Manu · dados atualizados a cada check do dia
 const DADOS = {
- "atualizado": "13/10/2026",
+ "atualizado": "14/10/2026",
  "titulo": "✍️ Daily da Manu · versão Theo",
- "subtitulo": "2 dias pras férias (15 a 29/10) · Briefing, comunicação e campanhas · Seven7",
+ "subtitulo": "1 dia pras férias (15 a 29/10) · Briefing, comunicação e campanhas · Seven7",
  "labelChecks": "a revisar",
  "tituloChecks": "🔍 Cards que precisam de acerto",
  "notaChecks": "Atrasados, menções e checks ainda carregados do raio-x de 01/10, sem reauditoria nova nessa rodada. Avisa se algum já tiver resolvido.",
@@ -209,28 +209,236 @@ const DADOS = {
   "mencoes": 7,
   "checks": 33
  },
- "hojeManual": [],
- "hoje": [],
- "proximos": [
+ "hojeManual": [
   {
-   "t": "Review presencial das peças do Gatola com o João",
-   "c": "cs-olivers#244",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/244",
-   "tag": "OLV",
-   "n": "Presencial com o time na quinta. Banner (2 versões), display de mesa, panfleto e motion LED de 15s.",
-   "d": "15/10",
+   "t": "Reunião presencial com o Matheus: bater o Grupo ROB e ver como fica a questão da agência",
+   "c": "",
+   "u": "",
+   "tag": "ROB",
+   "n": "Presencial. Resto do dia em home office.",
+   "d": "14/10",
    "p": "P0"
   },
   {
-   "t": "Orçamento do display de mesa e dos panfletos do Gatola",
-   "c": "cs-olivers#244",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/244",
+   "t": "Reunião com a arquiteta Camile às 16h: bater detalhes do projeto de Piratininga",
+   "c": "cs-olivers#229",
+   "u": "https://calendar.app.google/AektDmNEo1HyzZyr8",
    "tag": "OLV",
-   "n": "Displays: R$ 612 pra 204 mesas. Panfleto 10x14: base de R$ 220 a R$ 400 (1 mil a 5 mil). Vai pro Edilson conforme as artes forem aprovadas com o João. Material tem que chegar antes de 05/11.",
-   "d": "15/10",
+   "n": "O time de marketing fica responsável. Link da agenda no item.",
+   "d": "14/10",
+   "p": "P0"
+  },
+  {
+   "t": "História do Igor · site Ogro: confirmação do Igor",
+   "c": "cs-ogro-steaks#9",
+   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/9",
+   "tag": "OGRO",
+   "n": "Transcrita e enviada em 13/10. Falta ele confirmar (anos de carreira) pra você aprovar e mandar pro Miguel.",
+   "d": "14/10",
    "p": "P1"
+  },
+  {
+   "t": "14/10 · Check geral no calendário Øliver's",
+   "c": "cs-olivers#238",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/238",
+   "tag": "OLV",
+   "n": "Inclui a revisão geral no Notion (copies e títulos replicados).",
+   "d": "14/10"
+  },
+  {
+   "t": "14/10 · Check geral no calendário Temakeria",
+   "c": "TMK#241",
+   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/241",
+   "tag": "TMK",
+   "n": "",
+   "d": "14/10"
+  },
+  {
+   "t": "14/10 · Check geral no calendário Ogro",
+   "c": "cs-ogro-steaks#20",
+   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/20",
+   "tag": "OGRO",
+   "n": "Inclui complementar os dias que faltam de outubro.",
+   "d": "14/10"
+  },
+  {
+   "t": "14/10 · Check geral no calendário Lang's",
+   "c": "cs-langs#81",
+   "u": "https://github.com/dev-seven7/cs-langs/issues/81",
+   "tag": "LANGS",
+   "n": "",
+   "d": "14/10"
+  },
+  {
+   "t": "14/10 · Check geral no calendário Grupo ROB",
+   "c": "cs-rob-food#117",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/117",
+   "tag": "ROB",
+   "n": "Inclui a revisão geral no Notion (copies e títulos replicados).",
+   "d": "14/10"
+  },
+  {
+   "t": "Envio das campanhas de outubro pro time de Araruama",
+   "c": "",
+   "u": "https://dev-seven7.github.io/araruama-outubro/",
+   "tag": "TMK",
+   "n": "Página objetiva, Øliver's + Temakeria, cupons confirmados pela Aline.",
+   "d": "14/10"
+  },
+  {
+   "t": "Enviar o vídeo da campanha iFood pro Douglas (head de Ads iFood)",
+   "c": "cs-rob-food#118",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/118",
+   "tag": "ROB",
+   "n": "",
+   "d": "14/10"
+  },
+  {
+   "t": "Revisar as tarefas em aberto",
+   "c": "",
+   "u": "",
+   "tag": "S7",
+   "n": "",
+   "d": "14/10"
+  },
+  {
+   "t": "Reprecificação do salão Øliver's, dia da semana a definir",
+   "c": "cs-olivers#238",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/238",
+   "tag": "OLV",
+   "n": "",
+   "d": "14/10"
+  },
+  {
+   "t": "Revisar os relatórios de todas as marcas",
+   "c": "governance-s7#85",
+   "u": "https://github.com/dev-seven7/governance-s7/issues/85",
+   "tag": "S7",
+   "n": "Temakeria, Øliver's, Ogro e Grupo ROB, tudo centralizado nessa issue.",
+   "d": "14/10"
+  },
+  {
+   "t": "Revisão geral do GitHub: fechar issues já concluídas",
+   "c": "",
+   "u": "",
+   "tag": "S7",
+   "n": "",
+   "d": "14/10"
+  },
+  {
+   "t": "Revisar a arte do papel de bandeja (Langs) antes de entregar pro Anderson",
+   "c": "cs-langs#57",
+   "u": "https://github.com/dev-seven7/cs-langs/issues/57",
+   "tag": "LANGS",
+   "n": "João entregou o PDF com as 3 variações em 08/10. Falta você revisar e mandar pro Anderson aprovar.",
+   "d": "14/10",
+   "p": "P1"
+  },
+  {
+   "t": "Pagamento mais envio dos pedidos dos influenciadores de Araruama",
+   "c": "TMK#14",
+   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/14",
+   "tag": "TMK",
+   "n": "Faltavam telefone/endereço da Monique e telefone da Aline Trindade (Luiza, 08/10). Gabi pediu os cupons por influ pra Alline. Confirmar se já foi tudo pro Erick.",
+   "d": "14/10",
+   "p": "P0"
+  },
+  {
+   "t": "Confirmação da campanha e caixa do Gatola com a Vanessa (Espaço Z)",
+   "c": "cs-olivers#242",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/242",
+   "tag": "OLV",
+   "n": "Caixas já feitas e entregues (João, 09/10). Confirmar se a Vanessa deu o ok formal da campanha.",
+   "d": "14/10",
+   "p": "P0"
+  },
+  {
+   "t": "Envio das fotos da campanha iFood pra Alline / Pedro",
+   "c": "cs-rob-food#123",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/123",
+   "tag": "ROB",
+   "n": "Øliver's, Temakeria e Ogro. Issue das fotos fechada em 08/10, confirmar se o envio pra Alline/Pedro saiu.",
+   "d": "14/10"
+  },
+  {
+   "t": "Check nos criativos de topo, meio e fundo da Temakeria",
+   "c": "cs-temakeria-universitaria#230",
+   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/230",
+   "tag": "TMK",
+   "n": "Estáticos e vídeo.",
+   "d": "14/10"
+  },
+  {
+   "t": "Solicitar criação de cupons Øliver's pra outubro",
+   "c": "",
+   "u": "",
+   "tag": "OLV",
+   "n": "",
+   "d": "14/10"
+  },
+  {
+   "t": "Comunicar time de Araruama que a equipe de marketing vai fazer conteúdo dos pedidos dos influenciadores do giveaway",
+   "c": "",
+   "u": "https://dev-seven7.github.io/temakeria-araruama-captacao/",
+   "tag": "TMK",
+   "n": "",
+   "d": "14/10"
+  },
+  {
+   "t": "Check de social",
+   "c": "",
+   "u": "",
+   "tag": "S7",
+   "n": "",
+   "d": "14/10"
+  },
+  {
+   "t": "Arte dos 6 destaques do Grupo ROB (João)",
+   "c": "cs-rob-food#14",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/14",
+   "tag": "ROB",
+   "n": "Fotos e narrativa prontas, entrega era 13/10. Conferir antes das férias.",
+   "d": "14/10",
+   "p": "P1"
+  },
+  {
+   "t": "Fechar orçamento de mídias OOH com o Edilson",
+   "c": "cs-rob-food#26",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/26",
+   "tag": "ROB",
+   "n": "Pedido feito segunda (05/10). Reforçar hoje, 06/10. Ideal apresentar na reunião do Grupo ROB de sexta. Se não fechar tudo a tempo, adianta alguns valores e manda o resto quando a proposta completa estiver pronta.",
+   "d": "14/10",
+   "p": "P0"
+  },
+  {
+   "t": "Relatório dos últimos 3 meses + relatório de cupom pro Matheus e Maria",
+   "c": "governance-s7#110",
+   "u": "https://github.com/dev-seven7/governance-s7/issues/110",
+   "tag": "ROB",
+   "n": "Cobrança de ROI de marketing por canal, saiu da call presencial de 08/10.",
+   "d": "14/10",
+   "p": "P1"
+  },
+  {
+   "t": "Publicar o 2º post do LinkedIn ROB",
+   "c": "cs-rob-food#117",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/117",
+   "tag": "ROB",
+   "n": "Briefing já registrado na issue. Cadência: 3 a 4 dias depois do 1º post.",
+   "d": "14/10",
+   "p": "P2"
+  },
+  {
+   "t": "Arte Araruama · brinde avental",
+   "c": "cs-temakeria-universitaria#13",
+   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/13",
+   "tag": "TMK",
+   "n": "Estáticozinho em formato feed e story.",
+   "d": "14/10"
   }
  ],
+ "hoje": [],
+ "proximos": [],
  "novidades": [
   {
    "t": "Campanha iFood (Øliver's + Ogro + Temakeria): issue e página novas",
@@ -762,6 +970,12 @@ const DADOS = {
  ],
  "feito": [
   {
+   "d": "14/10",
+   "t": "Validar as pautas da gravação de 15/10 (Øliver's, Lang's e Temakeria)",
+   "c": "cs-olivers#249",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/249"
+  },
+  {
    "t": "Marcar reunião por call com a Camile, arquiteta do projeto de Piratininga (Øliver's)",
    "c": "cs-olivers#229",
    "u": "https://github.com/dev-seven7/cs-olivers/issues/229#issuecomment-6154031638",
@@ -1100,230 +1314,22 @@ const DADOS = {
  ],
  "amanha": [
   {
-   "t": "Reunião presencial com o Matheus: bater o Grupo ROB e ver como fica a questão da agência",
-   "c": "",
-   "u": "",
-   "tag": "ROB",
-   "n": "Presencial. Resto do dia em home office.",
-   "d": "14/10",
-   "p": "P0"
-  },
-  {
-   "t": "Reunião com a arquiteta Camile às 16h: bater detalhes do projeto de Piratininga",
-   "c": "cs-olivers#229",
-   "u": "https://calendar.app.google/AektDmNEo1HyzZyr8",
+   "t": "Review presencial das peças do Gatola com o João",
+   "c": "cs-olivers#244",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/244",
    "tag": "OLV",
-   "n": "O time de marketing fica responsável. Link da agenda no item.",
-   "d": "14/10",
+   "n": "Presencial com o time na quinta. Banner (2 versões), display de mesa, panfleto e motion LED de 15s.",
+   "d": "15/10",
    "p": "P0"
   },
   {
-   "t": "História do Igor · site Ogro: confirmação do Igor",
-   "c": "cs-ogro-steaks#9",
-   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/9",
-   "tag": "OGRO",
-   "n": "Transcrita e enviada em 13/10. Falta ele confirmar (anos de carreira) pra você aprovar e mandar pro Miguel.",
-   "d": "14/10",
+   "t": "Orçamento do display de mesa e dos panfletos do Gatola",
+   "c": "cs-olivers#244",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/244",
+   "tag": "OLV",
+   "n": "Displays: R$ 612 pra 204 mesas. Panfleto 10x14: base de R$ 220 a R$ 400 (1 mil a 5 mil). Vai pro Edilson conforme as artes forem aprovadas com o João. Material tem que chegar antes de 05/11.",
+   "d": "15/10",
    "p": "P1"
-  },
-  {
-   "t": "14/10 · Check geral no calendário Øliver's",
-   "c": "cs-olivers#238",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/238",
-   "tag": "OLV",
-   "n": "Inclui a revisão geral no Notion (copies e títulos replicados).",
-   "d": "14/10"
-  },
-  {
-   "t": "14/10 · Check geral no calendário Temakeria",
-   "c": "TMK#241",
-   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/241",
-   "tag": "TMK",
-   "n": "",
-   "d": "14/10"
-  },
-  {
-   "t": "14/10 · Check geral no calendário Ogro",
-   "c": "cs-ogro-steaks#20",
-   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/20",
-   "tag": "OGRO",
-   "n": "Inclui complementar os dias que faltam de outubro.",
-   "d": "14/10"
-  },
-  {
-   "t": "14/10 · Check geral no calendário Lang's",
-   "c": "cs-langs#81",
-   "u": "https://github.com/dev-seven7/cs-langs/issues/81",
-   "tag": "LANGS",
-   "n": "",
-   "d": "14/10"
-  },
-  {
-   "t": "14/10 · Check geral no calendário Grupo ROB",
-   "c": "cs-rob-food#117",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/117",
-   "tag": "ROB",
-   "n": "Inclui a revisão geral no Notion (copies e títulos replicados).",
-   "d": "14/10"
-  },
-  {
-   "t": "Envio das campanhas de outubro pro time de Araruama",
-   "c": "",
-   "u": "https://dev-seven7.github.io/araruama-outubro/",
-   "tag": "TMK",
-   "n": "Página objetiva, Øliver's + Temakeria, cupons confirmados pela Aline.",
-   "d": "14/10"
-  },
-  {
-   "t": "Enviar o vídeo da campanha iFood pro Douglas (head de Ads iFood)",
-   "c": "cs-rob-food#118",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/118",
-   "tag": "ROB",
-   "n": "",
-   "d": "14/10"
-  },
-  {
-   "t": "Revisar as tarefas em aberto",
-   "c": "",
-   "u": "",
-   "tag": "S7",
-   "n": "",
-   "d": "14/10"
-  },
-  {
-   "t": "Reprecificação do salão Øliver's, dia da semana a definir",
-   "c": "cs-olivers#238",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/238",
-   "tag": "OLV",
-   "n": "",
-   "d": "14/10"
-  },
-  {
-   "t": "Revisar os relatórios de todas as marcas",
-   "c": "governance-s7#85",
-   "u": "https://github.com/dev-seven7/governance-s7/issues/85",
-   "tag": "S7",
-   "n": "Temakeria, Øliver's, Ogro e Grupo ROB, tudo centralizado nessa issue.",
-   "d": "14/10"
-  },
-  {
-   "t": "Revisão geral do GitHub: fechar issues já concluídas",
-   "c": "",
-   "u": "",
-   "tag": "S7",
-   "n": "",
-   "d": "14/10"
-  },
-  {
-   "t": "Revisar a arte do papel de bandeja (Langs) antes de entregar pro Anderson",
-   "c": "cs-langs#57",
-   "u": "https://github.com/dev-seven7/cs-langs/issues/57",
-   "tag": "LANGS",
-   "n": "João entregou o PDF com as 3 variações em 08/10. Falta você revisar e mandar pro Anderson aprovar.",
-   "d": "14/10",
-   "p": "P1"
-  },
-  {
-   "t": "Pagamento mais envio dos pedidos dos influenciadores de Araruama",
-   "c": "TMK#14",
-   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/14",
-   "tag": "TMK",
-   "n": "Faltavam telefone/endereço da Monique e telefone da Aline Trindade (Luiza, 08/10). Gabi pediu os cupons por influ pra Alline. Confirmar se já foi tudo pro Erick.",
-   "d": "14/10",
-   "p": "P0"
-  },
-  {
-   "t": "Confirmação da campanha e caixa do Gatola com a Vanessa (Espaço Z)",
-   "c": "cs-olivers#242",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/242",
-   "tag": "OLV",
-   "n": "Caixas já feitas e entregues (João, 09/10). Confirmar se a Vanessa deu o ok formal da campanha.",
-   "d": "14/10",
-   "p": "P0"
-  },
-  {
-   "t": "Envio das fotos da campanha iFood pra Alline / Pedro",
-   "c": "cs-rob-food#123",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/123",
-   "tag": "ROB",
-   "n": "Øliver's, Temakeria e Ogro. Issue das fotos fechada em 08/10, confirmar se o envio pra Alline/Pedro saiu.",
-   "d": "14/10"
-  },
-  {
-   "t": "Check nos criativos de topo, meio e fundo da Temakeria",
-   "c": "cs-temakeria-universitaria#230",
-   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/230",
-   "tag": "TMK",
-   "n": "Estáticos e vídeo.",
-   "d": "14/10"
-  },
-  {
-   "t": "Solicitar criação de cupons Øliver's pra outubro",
-   "c": "",
-   "u": "",
-   "tag": "OLV",
-   "n": "",
-   "d": "14/10"
-  },
-  {
-   "t": "Comunicar time de Araruama que a equipe de marketing vai fazer conteúdo dos pedidos dos influenciadores do giveaway",
-   "c": "",
-   "u": "https://dev-seven7.github.io/temakeria-araruama-captacao/",
-   "tag": "TMK",
-   "n": "",
-   "d": "14/10"
-  },
-  {
-   "t": "Check de social",
-   "c": "",
-   "u": "",
-   "tag": "S7",
-   "n": "",
-   "d": "14/10"
-  },
-  {
-   "t": "Arte dos 6 destaques do Grupo ROB (João)",
-   "c": "cs-rob-food#14",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/14",
-   "tag": "ROB",
-   "n": "Fotos e narrativa prontas, entrega era 13/10. Conferir antes das férias.",
-   "d": "14/10",
-   "p": "P1"
-  },
-  {
-   "t": "Fechar orçamento de mídias OOH com o Edilson",
-   "c": "cs-rob-food#26",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/26",
-   "tag": "ROB",
-   "n": "Pedido feito segunda (05/10). Reforçar hoje, 06/10. Ideal apresentar na reunião do Grupo ROB de sexta. Se não fechar tudo a tempo, adianta alguns valores e manda o resto quando a proposta completa estiver pronta.",
-   "d": "14/10",
-   "p": "P0"
-  },
-  {
-   "t": "Relatório dos últimos 3 meses + relatório de cupom pro Matheus e Maria",
-   "c": "governance-s7#110",
-   "u": "https://github.com/dev-seven7/governance-s7/issues/110",
-   "tag": "ROB",
-   "n": "Cobrança de ROI de marketing por canal, saiu da call presencial de 08/10.",
-   "d": "14/10",
-   "p": "P1"
-  },
-  {
-   "t": "Publicar o 2º post do LinkedIn ROB",
-   "c": "cs-rob-food#117",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/117",
-   "tag": "ROB",
-   "n": "Briefing já registrado na issue. Cadência: 3 a 4 dias depois do 1º post.",
-   "d": "14/10",
-   "p": "P2"
-  },
-  {
-   "t": "Arte Araruama · brinde avental",
-   "c": "cs-temakeria-universitaria#13",
-   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/13",
-   "tag": "TMK",
-   "n": "Estáticozinho em formato feed e story.",
-   "d": "14/10"
   }
  ],
  "duranteFerias": [
