@@ -116,12 +116,12 @@
   </div>
 
   <section id="ferias" style="background:var(--surface);border:1px solid var(--p0);border-radius:12px;padding:16px 18px;margin-bottom:18px;">
-    <h2 style="margin:0 0 6px;">🏖️ Contagem pras férias</h2>
-    <p class="nota" style="margin:0;">Hoje é <b>15/10</b>, seu último dia antes das férias (presencial com o time). Você volta em <b>29/10</b>. Tudo de conteúdo e comunicação precisa estar fechado e rodando sozinho até lá.</p>
+    <h2 style="margin:0 0 6px;">👋 De volta das férias</h2>
+    <p class="nota" style="margin:0;">Hoje é <b>29/10</b>. Você ficou off de 15 a 28/10. Os 9 anos da Øliver's começam em <b>01/11</b> e o Gatola estreia em <b>05/11</b>.</p>
   </section>
 
   <section id="hoje">
-    <h2>🟣 Hoje · 15/10</h2>
+    <h2>🟣 Hoje · 29/10</h2>
     <div id="lista-hoje"></div>
   </section>
 
@@ -137,12 +137,12 @@
   </section>
 
   <section id="proximos">
-    <h2>🔵 Até sexta · 16/10 <span class="count" id="c-prox"></span></h2>
+    <h2>🔵 Pendentes de antes das férias <span class="count" id="c-prox"></span></h2>
     <div id="lista-proximos"></div>
   </section>
 
   <section id="novidades">
-    <h2>🆕 Entrou no GitHub recentemente</h2>
+    <h2>🆕 O que mudou enquanto você estava fora</h2>
     <p class="nota">Chegou agora e ainda não tem prazo aqui. A data real fica dentro da própria issue.</p>
     <div id="lista-novidades"></div>
   </section>
@@ -153,7 +153,7 @@
   </section>
 
   <section id="duranteFerias">
-    <h2>📆 Durante as férias · 15 a 29/10 <span class="count" id="c-df"></span></h2>
+    <h2>📆 Próximas datas <span class="count" id="c-df"></span></h2>
     <p class="nota">Precisa estar rodando sozinho, delegado, sem depender de você.</p>
     <div id="lista-duranteFerias"></div>
   </section>
@@ -197,9 +197,9 @@
 /* dados embutidos: evita cache do arquivo externo */
 // ✍️ Daily da Manu · dados atualizados a cada check do dia
 const DADOS = {
- "atualizado": "15/10/2026",
+ "atualizado": "29/10/2026",
  "titulo": "✍️ Daily da Manu · versão Theo",
- "subtitulo": "Último dia antes das férias (15 a 29/10) · Briefing, comunicação e campanhas · Seven7",
+ "subtitulo": "De volta das férias · Briefing, comunicação e campanhas",
  "labelChecks": "a revisar",
  "tituloChecks": "🔍 Cards que precisam de acerto",
  "notaChecks": "Atrasados, menções e checks ainda carregados do raio-x de 01/10, sem reauditoria nova nessa rodada. Avisa se algum já tiver resolvido.",
@@ -211,73 +211,169 @@ const DADOS = {
  },
  "hojeManual": [
   {
-   "t": "Ogro · Dia do Professor: puxar na planilha Clientes Ogro quem pediu mais, Bárbara ou Carolina",
-   "c": "cs-ogro-steaks#20",
-   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/20#issuecomment-6200215748",
-   "tag": "OGRO",
-   "n": "Crucial: o Otávio precisa mandar o endereço e a loja em que elas costumam pedir.",
-   "d": "15/10",
-   "p": "P0"
-  },
-  {
-   "t": "Confirmação da campanha e caixa do Gatola com a Vanessa (Espaço Z)",
-   "c": "cs-olivers#242",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/242",
+   "t": "9 anos · gravação de hoje com Matheus e Edilson",
+   "c": "cs-olivers#241",
+   "u": "https://dev-seven7.github.io/olivers-9anos-roteiro/",
    "tag": "OLV",
-   "n": "Só falta isso pra mandar a caixa pra produção. Versão final preta e branca entregue pelo João em 14/10.",
-   "d": "15/10",
+   "n": "Pergunta pro Matheus: \"nesses 9 anos de Øliver's, quais clientes mais marcaram a história da marca?\". Pendências da Luiza (27/10): local e horário, sabores do quadro \"Os Sabores\" e protótipo do ticket (estava com o João).",
+   "d": "29/10",
    "p": "P0"
   },
   {
-   "t": "Alinhamento com o time pela página Geral das Marcas 15/10",
-   "c": "",
-   "u": "https://dev-seven7.github.io/geral-das-marcas-15-10/",
-   "tag": "S7",
-   "n": "Aprovar conteúdos editados, calendário junto, recap da gravação, Dia do Professor, vídeo da Ella, parceiros pra Luiza.",
-   "d": "15/10",
+   "t": "9 anos · seleção de vídeos e imagens pro vídeo",
+   "c": "cs-olivers#241",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/241#issuecomment-6483353248",
+   "tag": "OLV",
+   "n": "Fotos antigas da primeira loja (celular do Matheus) + B-roll das lojas de hoje, pro antes e depois.",
+   "d": "29/10",
    "p": "P0"
   },
   {
-   "t": "Dia do Professor: Øliver's (cupom PROFESSOR + carrossel de memes), Ogro (story + lista de votantes pra Alline), Lang's (push do desconto) e Temakeria (story com enquete)",
-   "c": "",
-   "u": "https://dev-seven7.github.io/geral-das-marcas-15-10/#professor",
+   "t": "9 anos · finalizar o vídeo com a Luiza (cortes e falas de Matheus e Edilson)",
+   "c": "cs-olivers#241",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/241",
+   "tag": "OLV",
+   "n": "Até amanhã, 30/10. Campanha começa 01/11.",
+   "d": "30/10",
+   "p": "P0"
+  },
+  {
+   "t": "🚨 Gatola da Cartola: nada andou desde 14/10 e a estreia é 05/11",
+   "c": "cs-olivers#244",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/244",
+   "tag": "OLV",
+   "n": "Confirmar com a Vanessa (Espaço Z) pra liberar a caixa pra produção. Impressos (banner, display, panfleto, motion) sem designer desde a saída do João. Orçamento do display e panfleto pro Edilson.",
+   "d": "29/10",
+   "p": "P0"
+  },
+  {
+   "t": "Confirmar os cupons NEVEOFF e CHOCOOFF",
+   "c": "cs-olivers#238",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/238#issuecomment-6272296745",
+   "tag": "OLV",
+   "n": "A Luiza perguntou em 19/10: qual cupom dá qual pizza, validade e se vale em todas as unidades.",
+   "d": "29/10",
+   "p": "P1"
+  },
+  {
+   "t": "Piratininga: validar a página de influenciadoras pra seguir pra Michelle",
+   "c": "cs-olivers#229",
+   "u": "https://dev-seven7.github.io/olivers-influencers-piratininga/",
+   "tag": "OLV",
+   "n": "10 perfis + as 4 da pescaria. A Luiza pediu o ok em 21/10.",
+   "d": "29/10",
+   "p": "P1"
+  },
+  {
+   "t": "9 anos: influ da Lapa e mensagem das influs com a mecânica nova do ticket",
+   "c": "cs-olivers#241",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/241#issuecomment-6455065545",
+   "tag": "OLV",
+   "n": "Sugestão da Luiza pra Lapa: Angelina Aquino (permuta). A mensagem precisa trocar \"ticket escondido em pedidos\" pelo cliente que mais pediu pelo site em 2026.",
+   "d": "29/10",
+   "p": "P1"
+  },
+  {
+   "t": "Halloween 31/10: conferir os posts das 4 marcas",
+   "c": "cs-olivers#238",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/238",
    "tag": "S7",
+   "n": "Øliver's After Dark (cupom TRAVESSURA R$ 15, influs postam 30 e 31/10), Ogro sem preço (Dupla Monstro), Lang's e Temakeria (a Gabi estava resolvendo em 27/10).",
+   "d": "29/10",
+   "p": "P1"
+  },
+  {
+   "t": "2 anos do Grupo ROB (01/11): post",
+   "c": "cs-rob-food#117",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/117#issuecomment-6177814674",
+   "tag": "ROB",
+   "n": "Mesmo dia dos 9 anos da Øliver's.",
+   "d": "29/10",
+   "p": "P1"
+  },
+  {
+   "t": "Definir quem assume o design: destaques do Grupo ROB e da Øliver's, Gatola, Piratininga",
+   "c": "cs-rob-food#14",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/14",
+   "tag": "S7",
+   "n": "O João saiu sem entregar os destaques (#14 e cs-olivers#105).",
+   "d": "29/10",
+   "p": "P1"
+  },
+  {
+   "t": "Ler a reestruturação do marketing e alinhar com a Gabi e o Matheus",
+   "c": "",
+   "u": "https://github.com/dev-grupo-olv/setor-marketing/issues/140",
+   "tag": "S7",
+   "n": "Seven7 descontinuada, tráfego com a Ghost (Øliver's, ROB, TMK Araruama). Lang's, TMK SG e Ogro sem definição de tráfego.",
+   "d": "29/10",
+   "p": "P1"
+  },
+  {
+   "t": "Grupo ROB: 8 vídeos de social prontos, aguardando aval pra agendar",
+   "c": "cs-rob-food#67",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/67#issuecomment-6422716186",
+   "tag": "ROB",
+   "n": "Pedido da Luiza pra Gabi em 26/10. Conferir se saiu.",
+   "d": "29/10",
+   "p": "P2"
+  }
+ ],
+ "hoje": [],
+ "proximos": [
+  {
+   "t": "Fechar orçamento de mídias OOH: aguardando os outros orçamentos do Edilson",
+   "c": "cs-rob-food#26",
+   "u": "https://dev-seven7.github.io/midia-ooh-grupo-rob/",
+   "tag": "ROB",
+   "n": "Barra da Tijuca, Tijuca, Jacarepaguá, Recreio.",
+   "d": "15/10",
+   "p": ""
+  },
+  {
+   "t": "Gravação de expansão (Edilson, Mathias, Mateus, Gustavo) + conteúdo dos 2 anos",
+   "c": "cs-rob-food#117",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/117#issuecomment-6177814674",
+   "tag": "ROB",
+   "n": "Ver o dia disponível com eles.",
+   "d": "15/10",
+   "p": ""
+  },
+  {
+   "t": "Publicar o 2º post do LinkedIn ROB",
+   "c": "cs-rob-food#117",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/117",
+   "tag": "ROB",
    "n": "",
    "d": "15/10",
-   "p": "P0"
+   "p": ""
   },
   {
    "t": "História do Igor · site Ogro: revisão do Igor e do Jimmy",
    "c": "cs-ogro-steaks#9",
    "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/9",
    "tag": "OGRO",
-   "n": "Mandada no grupo. Depois do ok, Gabi ou Luiza passam pro Miguel finalizar as copies.",
+   "n": "Atenção: Ogro fora da Ghost, ver o que fica.",
    "d": "15/10",
-   "p": "P1"
+   "p": ""
   },
   {
-   "t": "Revisar as tarefas em aberto",
-   "c": "",
-   "u": "",
-   "tag": "S7",
+   "t": "Arte Araruama · brinde avental",
+   "c": "cs-temakeria-universitaria#13",
+   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/13",
+   "tag": "TMK",
    "n": "",
-   "d": "15/10"
+   "d": "15/10",
+   "p": ""
   },
   {
-   "t": "Reprecificação do salão Øliver's, dia da semana a definir",
+   "t": "Reprecificação do salão Øliver's",
    "c": "cs-olivers#238",
    "u": "https://github.com/dev-seven7/cs-olivers/issues/238",
    "tag": "OLV",
    "n": "",
-   "d": "15/10"
-  },
-  {
-   "t": "Revisar os relatórios de todas as marcas",
-   "c": "governance-s7#85",
-   "u": "https://github.com/dev-seven7/governance-s7/issues/85",
-   "tag": "S7",
-   "n": "Temakeria, Øliver's, Ogro e Grupo ROB, tudo centralizado nessa issue.",
-   "d": "15/10"
+   "d": "15/10",
+   "p": ""
   },
   {
    "t": "Revisão geral do GitHub: fechar issues já concluídas",
@@ -285,110 +381,45 @@ const DADOS = {
    "u": "",
    "tag": "S7",
    "n": "",
-   "d": "15/10"
-  },
-  {
-   "t": "Check nos criativos de topo, meio e fundo da Temakeria",
-   "c": "cs-temakeria-universitaria#230",
-   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/230",
-   "tag": "TMK",
-   "n": "Estáticos e vídeo.",
-   "d": "15/10"
-  },
-  {
-   "t": "Check de social",
-   "c": "",
-   "u": "",
-   "tag": "S7",
-   "n": "",
-   "d": "15/10"
-  },
-  {
-   "t": "Fechar orçamento de mídias OOH com o Edilson",
-   "c": "cs-rob-food#26",
-   "u": "https://dev-seven7.github.io/midia-ooh-grupo-rob/",
-   "tag": "ROB",
-   "n": "Página com a proposta do fornecedor (Front Light Niterói + painéis rodoviários, valores, condições e 43 pontos). Aguardando os outros orçamentos do Edilson: Tijuca, Jacarepaguá, Recreio e arredores.",
    "d": "15/10",
-   "p": "P0"
-  },
-  {
-   "t": "Publicar o 2º post do LinkedIn ROB",
-   "c": "cs-rob-food#117",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/117",
-   "tag": "ROB",
-   "n": "Briefing já registrado na issue. Cadência: 3 a 4 dias depois do 1º post.",
-   "d": "15/10",
-   "p": "P2"
-  },
-  {
-   "t": "Arte Araruama · brinde avental",
-   "c": "cs-temakeria-universitaria#13",
-   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/13",
-   "tag": "TMK",
-   "n": "Estáticozinho em formato feed e story.",
-   "d": "15/10"
-  },
-  {
-   "t": "Review presencial das peças do Gatola com o João",
-   "c": "cs-olivers#244",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/244",
-   "tag": "OLV",
-   "n": "Presencial com o time na quinta. Banner (2 versões), display de mesa, panfleto e motion LED de 15s.",
-   "d": "15/10",
-   "p": "P0"
-  },
-  {
-   "t": "Orçamento do display de mesa e dos panfletos do Gatola",
-   "c": "cs-olivers#244",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/244",
-   "tag": "OLV",
-   "n": "Displays: R$ 612 pra 204 mesas. Panfleto 10x14: base de R$ 220 a R$ 400 (1 mil a 5 mil). Vai pro Edilson conforme as artes forem aprovadas com o João. Material tem que chegar antes de 05/11.",
-   "d": "15/10",
-   "p": "P1"
-  },
-  {
-   "t": "Vídeos dos novos criativos ROB editados e publicados",
-   "c": "cs-rob-food#67",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/67",
-   "tag": "ROB",
-   "n": "Narrativas da Gabi, servem também de posts de feed.",
-   "d": "15/10",
-   "p": "P0"
-  },
-  {
-   "t": "Produção de conteúdo nova (15 a 20/10) + documento de direcionamento",
-   "c": "cs-rob-food#117",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/117",
-   "tag": "ROB",
-   "n": "Agendar a gravação com Matheus/Mathias/Gustavo/Edilson, janela 15 a 20/10, precisa estar marcada antes de você sair. Pautas pro Edilson já definidas: posicionar como setor de compras/supply/logística da fábrica (cs-rob-food#67). Consolidar tudo isso num documento de direcionamento de conteúdo, página pública, no mesmo modelo da daily-manu-theo.",
-   "d": "15/10",
-   "p": "P1"
+   "p": ""
   }
  ],
- "hoje": [],
- "proximos": [],
  "novidades": [
   {
-   "t": "Campanha iFood (Øliver's + Ogro + Temakeria): issue e página novas",
-   "c": "cs-rob-food#118",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/118",
-   "tag": "ROB",
-   "n": "Issue nova com o resumo geral, entregas prioritárias e produtos candidatos. Página proposta-grupo-rob-ifood publicada com conceito, peças e direcionamento por marca."
+   "t": "Seven7 descontinuada · reestruturação do marketing",
+   "c": "setor-marketing#140",
+   "u": "https://github.com/dev-grupo-olv/setor-marketing/issues/140",
+   "tag": "S7",
+   "n": "Tráfego com a Ghost: Øliver's, expansão ROB e TMK Araruama (3 meses). Lang's, TMK SG e Ogro sem definição. A Ghost cancelou as issues de Meta da Ogro em 27/10."
   },
   {
-   "t": "Controles de parceiros de outubro abertos nas 4 marcas",
-   "c": "cs-olivers#245",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/245",
+   "t": "Ogro SG: inauguração de 06/11 suspensa",
+   "c": "cs-ogro-steaks#14",
+   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/14#issuecomment-6455064691",
+   "tag": "OGRO",
+   "n": "Sem cardápio, o marketing vai sugerir um. Tudo parado até a nova data; 14 influs e orçamento de R$ 2.800 a 3.100 guardados."
+  },
+  {
+   "t": "🚨 Lapa: conta de anúncios parada desde 13/10",
+   "c": "cs-olivers#95",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/95#issuecomment-6351123478",
    "tag": "OLV",
-   "n": "Também abertos: cs-langs#82, TMK#243 e cs-ogro-steaks#21 (esta última é a primeira vez que a Ogro tem controle de parceiros, base zerada, com tarefa de mapear lojas e pesquisar influenciadores de SG)."
+   "n": "Meta suspendeu por pendência de pagamento."
   },
   {
-   "t": "Briefing completo dos destaques do Grupo ROB, registrado e ajustado",
-   "c": "cs-rob-food#14",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/14",
-   "tag": "ROB",
-   "n": "Narrativa tela a tela dos 6 destaques (Grupo ROB, Øliver's, Temakeria, Ogro, Franqueados, Na Mídia) registrada, você ajustou direto no GitHub. Fotos já organizadas pro João, Luiza marcada."
+   "t": "Dia do Professor da Ogro resolvido: ganhadora Bárbara",
+   "c": "cs-ogro-steaks#20",
+   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/20#issuecomment-6271703679",
+   "tag": "OGRO",
+   "n": ""
+  },
+  {
+   "t": "Relatório social 16 a 22/10",
+   "c": "governance-s7#85",
+   "u": "https://dev-seven7.github.io/relatorio-social-out26/",
+   "tag": "S7",
+   "n": "Temakeria 9,2x a média de setembro; Lang's caiu 85%."
   }
  ],
  "vencendo": [],
@@ -1303,52 +1334,55 @@ const DADOS = {
  "amanha": [],
  "duranteFerias": [
   {
-   "t": "Fechar calendário e campanhas de novembro e dezembro, todas as marcas",
-   "c": "cs-olivers#240",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/240",
+   "t": "Halloween · After Dark, Ogro, Lang's, Temakeria",
+   "c": "",
+   "u": "",
    "tag": "S7",
-   "n": "Prazo: 28/10, dia que você volta de férias. Até lá precisa estar tudo definido e alinhado pra começar a 1ª semana de novembro. Não é fechar tudo, é mapear as datas principais pra pelo menos a 1ª semana de novembro sair com conteúdo no gatilho, já que você volta de férias dia 28/29. Øliver's: aniversário 9 anos (01 a 09/11, #241), Black Friday 27/11 + Cyber Monday 30/11, Finados 02/11, aniversário Cabo Frio 13/11, aniversário Niterói 22/11, filme Gatola (#242 do OLV). ROB: 2 anos do grupo em 01/11 (ainda sem issue própria, só citado em cs-rob-food#117). Temakeria: ENEM + Dia do Estudante 17/11, Black Friday, já tem planejamento em TMK#242. Langs: Black Friday + hambúrguer do mês, cs-langs#65, ainda sem data/mecânica fechada com o Anderson. Ogro: nenhuma issue de novembro encontrada ainda, precisa abrir.",
-   "d": "28/10"
-  },
-  {
-   "t": "Calendários de outubro fechados, todas as marcas",
-   "c": "cs-rob-food#117",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/117",
-   "tag": "S7",
-   "n": "Precisa estar rodando sozinho durante as férias. Prazo final movido pra 31/10 (cai durante as férias, precisa estar delegado).",
+   "n": "",
    "d": "31/10",
    "p": "P0"
   },
   {
-   "t": "Dia do Professor, campanha rodando",
-   "c": "cs-olivers#245",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/245",
+   "t": "9 anos da Øliver's começa + 2 anos do Grupo ROB",
+   "c": "cs-olivers#241",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/241",
    "tag": "OLV",
-   "n": "15/10, cupom PROFESSOR.",
-   "d": "15/10"
+   "n": "",
+   "d": "01/11",
+   "p": "P0"
   },
   {
-   "t": "Halloween, Travessuras da Øliver's",
-   "c": "cs-olivers#245",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/245",
+   "t": "Estreia do Gatola da Cartola",
+   "c": "cs-olivers#244",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/244",
    "tag": "OLV",
-   "n": "31/10, cupom TRAVESSURA.",
-   "d": "31/10"
+   "n": "Material precisa chegar antes.",
+   "d": "05/11",
+   "p": "P0"
   },
   {
-   "t": "Inauguração Ogro São Gonçalo",
+   "t": "Fim da campanha dos 9 anos",
+   "c": "cs-olivers#241",
+   "u": "",
+   "tag": "OLV",
+   "n": "",
+   "d": "09/11"
+  },
+  {
+   "t": "Øliver's Piratininga · inauguração (sem data, meados de novembro)",
+   "c": "cs-olivers#229",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/229",
+   "tag": "OLV",
+   "n": "",
+   "d": "nov"
+  },
+  {
+   "t": "Ogro São Gonçalo · nova data a definir",
    "c": "cs-ogro-steaks#14",
    "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/14",
    "tag": "OGRO",
-   "n": "Prevista pro fim de outubro/início de novembro."
-  },
-  {
-   "t": "2 anos do Grupo ROB, aquecimento",
-   "c": "cs-rob-food#117",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/117",
-   "tag": "ROB",
-   "n": "01/11, aquecer na última semana de outubro.",
-   "d": "01/11"
+   "n": "",
+   "d": "?"
   }
  ]
 };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</script>
