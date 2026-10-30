@@ -46,7 +46,7 @@
   .card.urgente{border-left:4px solid var(--p0)}
   .card .body{flex:1;min-width:0}
   .card .t{font-weight:600;margin-bottom:3px}
-  .card .n{font-size:14px;color:var(--txt2)}
+  .card .n{font-size:14px;color:var(--txt2);white-space:pre-line}
   .card .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;align-items:center}
   a.ref{font-size:12px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
     background:var(--surface2);border:1px solid var(--line);border-radius:6px;padding:2px 8px;
@@ -117,11 +117,11 @@
 
   <section id="ferias" style="background:var(--surface);border:1px solid var(--p0);border-radius:12px;padding:16px 18px;margin-bottom:18px;">
     <h2 style="margin:0 0 6px;">👋 De volta das férias</h2>
-    <p class="nota" style="margin:0;">Hoje é <b>29/10</b>. Você ficou off de 15 a 28/10. Os 9 anos da Øliver's começam em <b>01/11</b> e o Gatola estreia em <b>05/11</b>.</p>
+    <p class="nota" style="margin:0;">Hoje é <b>30/10</b>. Halloween é amanhã. Os 9 anos da Øliver's começam em <b>01/11</b> e o Gatola estreia em <b>05/11</b>.</p>
   </section>
 
   <section id="hoje">
-    <h2>🟣 Hoje · 29/10</h2>
+    <h2>🟣 Hoje · 30/10</h2>
     <div id="lista-hoje"></div>
   </section>
 
@@ -197,7 +197,7 @@
 /* dados embutidos: evita cache do arquivo externo */
 // ✍️ Daily da Manu · dados atualizados a cada check do dia
 const DADOS = {
- "atualizado": "29/10/2026",
+ "atualizado": "30/10/2026",
  "titulo": "✍️ Daily da Manu · versão Theo",
  "subtitulo": "De volta das férias · Briefing, comunicação e campanhas",
  "labelChecks": "a revisar",
@@ -211,29 +211,20 @@ const DADOS = {
  },
  "hojeManual": [
   {
-   "t": "9 anos · gravação de hoje com Matheus e Edilson",
-   "c": "cs-olivers#241",
-   "u": "https://dev-seven7.github.io/olivers-9anos-roteiro/",
-   "tag": "OLV",
-   "n": "Pergunta pro Matheus: \"nesses 9 anos de Øliver's, quais clientes mais marcaram a história da marca?\". Pendências da Luiza (27/10): local e horário, sabores do quadro \"Os Sabores\" e protótipo do ticket (estava com o João).",
-   "d": "29/10",
+   "t": "REUNIÃO COM GABI PRA ATT GERAL DO SETOR",
+   "c": "",
+   "u": "https://github.com/dev-grupo-olv/setor-marketing/issues/140",
+   "tag": "S7",
+   "n": "1. Reestruturação: o que muda pra mim e pro time; tráfego de Lang's, TMK SG e Ogro (setor-marketing#140)\n2. Design: quem assume Gatola (estreia 05/11), destaques ROB e Øliver's, Piratininga (109 quadros) e peças dos 9 anos\n3. Gatola: status com a Vanessa e produção da caixa\n4. 9 anos: aprovação do cupom 9ANOSOLV pela Alline, influs que faltam (SG, Lapa, Alcântara) e roteiro v2\n5. Ogro: segue com a gente? Data nova de SG e cardápio\n6. Piratininga: lista da Michelle, data da inauguração (fim de nov ou início de dez) e budget das influs\n7. ROB: aval dos 8 vídeos de social + gravação de expansão com o conteúdo dos 2 anos\n8. Lapa: conta de anúncios parada desde 13/10 por pagamento\n9. Tráfego da Øliver's em novembro: teto caiu pra R$ 15 mil",
+   "d": "30/10",
    "p": "P0"
   },
   {
-   "t": "9 anos · seleção de vídeos e imagens pro vídeo",
+   "t": "9 anos · fechar o vídeo com a Luiza (narração sai domingo 01/11, vídeo dos 9 meses segunda 02/11)",
    "c": "cs-olivers#241",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/241#issuecomment-6483353248",
+   "u": "https://dev-seven7.github.io/olivers-9anos-roteiro-v2/",
    "tag": "OLV",
-   "n": "Fotos antigas da primeira loja (celular do Matheus) + B-roll das lojas de hoje, pro antes e depois.",
-   "d": "29/10",
-   "p": "P0"
-  },
-  {
-   "t": "9 anos · finalizar o vídeo com a Luiza (cortes e falas de Matheus e Edilson)",
-   "c": "cs-olivers#241",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/241",
-   "tag": "OLV",
-   "n": "Até amanhã, 30/10. Campanha começa 01/11.",
+   "n": "Seleção de imagens + cortes e falas de Matheus e Edilson.",
    "d": "30/10",
    "p": "P0"
   },
@@ -242,44 +233,35 @@ const DADOS = {
    "c": "cs-olivers#244",
    "u": "https://github.com/dev-seven7/cs-olivers/issues/244",
    "tag": "OLV",
-   "n": "Confirmar com a Vanessa (Espaço Z) pra liberar a caixa pra produção. Impressos (banner, display, panfleto, motion) sem designer desde a saída do João. Orçamento do display e panfleto pro Edilson.",
-   "d": "29/10",
+   "n": "Confirmar com a Vanessa (Espaço Z) pra liberar a caixa pra produção. Impressos sem designer. Orçamento do display e panfleto pro Edilson.",
+   "d": "30/10",
    "p": "P0"
   },
   {
-   "t": "Confirmar os cupons NEVEOFF e CHOCOOFF",
-   "c": "cs-olivers#238",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/238#issuecomment-6272296745",
-   "tag": "OLV",
-   "n": "A Luiza perguntou em 19/10: qual cupom dá qual pizza, validade e se vale em todas as unidades.",
-   "d": "29/10",
-   "p": "P1"
-  },
-  {
-   "t": "Piratininga: validar a página de influenciadoras pra seguir pra Michelle",
-   "c": "cs-olivers#229",
-   "u": "https://dev-seven7.github.io/olivers-influencers-piratininga/",
-   "tag": "OLV",
-   "n": "10 perfis + as 4 da pescaria. A Luiza pediu o ok em 21/10.",
-   "d": "29/10",
-   "p": "P1"
-  },
-  {
-   "t": "9 anos: influ da Lapa e mensagem das influs com a mecânica nova do ticket",
+   "t": "9 anos · influs que faltam: São Gonçalo (Iago ou Augustus), Lapa e Alcântara",
    "c": "cs-olivers#241",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/241#issuecomment-6455065545",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/241#issuecomment-6505570008",
    "tag": "OLV",
-   "n": "Sugestão da Luiza pra Lapa: Angelina Aquino (permuta). A mensagem precisa trocar \"ticket escondido em pedidos\" pelo cliente que mais pediu pelo site em 2026.",
-   "d": "29/10",
-   "p": "P1"
+   "n": "3 de 9 confirmadas (Quezia, Duda Masini, Bianca Gomes). Deborah, Duda Antunes e Nat Bianchi aguardando.",
+   "d": "30/10",
+   "p": "P0"
   },
   {
-   "t": "Halloween 31/10: conferir os posts das 4 marcas",
+   "t": "Iago: pedido grande pra festa de Halloween dele em 06/11 + cobrar o conteúdo de outubro",
+   "c": "cs-olivers#245",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/245",
+   "tag": "OLV",
+   "n": "Outubro: Øliver's usada (16 e 23/10), Lang's e TMK não usadas. Os 2 pedidos sem conteúdo. Pedido na Central até 03 ou 04/11.",
+   "d": "30/10",
+   "p": "P0"
+  },
+  {
+   "t": "Halloween amanhã (31/10): conferir os posts das 4 marcas",
    "c": "cs-olivers#238",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/238",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/238#issuecomment-6504572782",
    "tag": "S7",
-   "n": "Øliver's After Dark (cupom TRAVESSURA R$ 15, influs postam 30 e 31/10), Ogro sem preço (Dupla Monstro), Lang's e Temakeria (a Gabi estava resolvendo em 27/10).",
-   "d": "29/10",
+   "n": "After Dark: Augustus e Iza confirmados, Carol Telles sem retorno. Ogro sem preço (Dupla Monstro).",
+   "d": "30/10",
    "p": "P1"
   },
   {
@@ -288,35 +270,17 @@ const DADOS = {
    "u": "https://github.com/dev-seven7/cs-rob-food/issues/117#issuecomment-6177814674",
    "tag": "ROB",
    "n": "Mesmo dia dos 9 anos da Øliver's.",
-   "d": "29/10",
+   "d": "30/10",
    "p": "P1"
   },
   {
-   "t": "Definir quem assume o design: destaques do Grupo ROB e da Øliver's, Gatola, Piratininga",
-   "c": "cs-rob-food#14",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/14",
-   "tag": "S7",
-   "n": "O João saiu sem entregar os destaques (#14 e cs-olivers#105).",
-   "d": "29/10",
+   "t": "Piratininga: acompanhar valores e formato das influs (Luiza, até 06/11)",
+   "c": "cs-olivers#229",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/229#issuecomment-6509260571",
+   "tag": "OLV",
+   "n": "Inauguração pode ir pro fim de novembro/início de dezembro.",
+   "d": "30/10",
    "p": "P1"
-  },
-  {
-   "t": "Ler a reestruturação do marketing e alinhar com a Gabi e o Matheus",
-   "c": "",
-   "u": "https://github.com/dev-grupo-olv/setor-marketing/issues/140",
-   "tag": "S7",
-   "n": "Seven7 descontinuada, tráfego com a Ghost (Øliver's, ROB, TMK Araruama). Lang's, TMK SG e Ogro sem definição de tráfego.",
-   "d": "29/10",
-   "p": "P1"
-  },
-  {
-   "t": "Grupo ROB: 8 vídeos de social prontos, aguardando aval pra agendar",
-   "c": "cs-rob-food#67",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/67#issuecomment-6422716186",
-   "tag": "ROB",
-   "n": "Pedido da Luiza pra Gabi em 26/10. Conferir se saiu.",
-   "d": "29/10",
-   "p": "P2"
   }
  ],
  "hoje": [],
@@ -910,6 +874,30 @@ const DADOS = {
   }
  ],
  "feito": [
+  {
+   "t": "Responder a Luiza sobre os cupons NEVEOFF e CHOCOOFF",
+   "c": "cs-olivers#238",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/238#issuecomment-6525873613",
+   "tag": "OLV",
+   "n": "",
+   "d": "30/10"
+  },
+  {
+   "t": "TMK Araruama: incluir a Bianca Gomes no almoço (stories + vídeo pra ads)",
+   "c": "TMK#248",
+   "u": "https://github.com/dev-seven7/cs-temakeria-universitaria/issues/248#issuecomment-6525902196",
+   "tag": "TMK",
+   "n": "",
+   "d": "30/10"
+  },
+  {
+   "t": "Piratininga: prazo das influs pra 06/11 e convite com data aberta",
+   "c": "cs-olivers#229",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/229#issuecomment-6509260571",
+   "tag": "OLV",
+   "n": "",
+   "d": "30/10"
+  },
   {
    "t": "Replicar o modelo de inauguração pra Øliver's Piratininga: abrir as issues de giveaway, LP com produto isca e criativos",
    "c": "cs-olivers#229",
