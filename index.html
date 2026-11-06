@@ -5,7 +5,7 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="pragma" content="no-cache">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Daily · Seven7</title>
+<title>Dashboard · Manu</title>
 <style>
   :root{
     --bg:#0f1115; --surface:#171a21; --surface2:#1e222b; --line:#2a2f3a;
@@ -89,6 +89,23 @@
     border-radius:20px;padding:5px 13px;cursor:pointer}
   .f.on{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
   .nota{font-size:13px;color:var(--txt3);margin-top:-6px;margin-bottom:14px}
+
+  .time{border-color:var(--accent)}
+  .time > summary{font-size:17px}
+  .org{background:var(--surface2);border-radius:10px;padding:12px 14px;font-size:13.5px;overflow-x:auto;margin:12px 0 0;white-space:pre}
+  .pessoa{border-top:1px solid var(--line);padding:10px 0}
+  .pessoa > summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+  .pessoa > summary::-webkit-details-marker{display:none}
+  .pessoa > summary::after{content:"▾";color:var(--txt3);margin-left:auto}
+  .pessoa[open] > summary::after{content:"▴"}
+  .pessoa ul{margin:8px 0 2px;padding-left:20px;font-size:14px;color:var(--txt2)}
+  .pessoa li{margin:4px 0}
+  .pessoa a{color:var(--accent)}
+  table.datas{width:100%;border-collapse:collapse;font-size:14px}
+  table.datas td{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.datas td:first-child{white-space:nowrap;color:var(--txt2);font-weight:600}
+  table.datas td:last-child{color:var(--txt3);font-size:13px}
+  .bloco > summary a{font-size:12px;color:var(--accent);font-weight:500}
   footer{color:var(--txt3);font-size:13px;text-align:center;padding:26px 0;border-top:1px solid var(--line)}
   @media (max-width:640px){
     .kpis{grid-template-columns:repeat(2,1fr)}
@@ -101,27 +118,30 @@
 
 <header>
   <div class="wrap">
-    <h1 id="titulo">Daily</h1>
+    <h1 id="titulo">Dashboard</h1>
     <div class="sub" id="sub"></div>
   </div>
 </header>
 
 <div class="wrap">
 
+  <details class="bloco time" id="time"><summary>🧭 Time de Marketing · Grupo ROB <span class="data">ver time ▾</span></summary><div class="itens"><pre class="org">Matheus · CMO do Grupo ROB
+└── Manu · Head de Marketing
+    ├── Victor · Analista · Ogro
+    ├── [a contratar] · Analista · Øliver's + Temakeria
+    ├── Designer · freela
+    ├── Luiza · Social Media
+    └── Otávio · Produtor de Conteúdo</pre><p class="nota" style="margin:10px 0">Fluxo: estratégia (Manu + Matheus) → plano e resumo das campanhas (Manu) → calendário, briefings, comunicação (analistas) → peças (designer) + vídeo e foto (Otávio) → posta, interage, reporta (Luiza) → aprovação de campanha e acompanhamento (Manu)</p><table class="datas"><tr><td>👩‍💼 Manu</td><td><b>Head de Marketing</b><br><span style="color:var(--txt2)">Estratégia com o Matheus, plano e resumo das campanhas, aprovação final de campanha, gestão do time, dados e resultados, orçamento</span></td></tr><tr><td>📊 Victor</td><td><b>Analista · Ogro</b><br><span style="color:var(--txt2)">Planejamento, calendário, briefings e aprovação de peças da Ogro, influenciadores, canais, resultado e vendas</span></td></tr><tr><td>🔎 Analista Øliver's + Temakeria</td><td><b>a contratar</b><br><span style="color:var(--txt2)">Mesmo papel do analista da Ogro. Enquanto isso, a Luiza apoia o planejamento dessas marcas</span></td></tr><tr><td>📱 Luiza</td><td><b>Social Media</b><br><span style="color:var(--txt2)">Postagem e agendamento, comentários e DMs, stories diários, trends, relatório de social por marca</span></td></tr><tr><td>🎬 Otávio Leocádio</td><td><b>Produtor de Conteúdo</b><br><span style="color:var(--txt2)">Edição de vídeo e foto, captação nas gravações, roteiro e storytelling</span></td></tr><tr><td>🎨 Designer</td><td><b>freela</b><br><span style="color:var(--txt2)">Peças gráficas, impressos e criativos estáticos</span></td></tr></table></div></details>
+
   <div class="kpis">
-    <div class="kpi" onclick="irPara('atrasados')"><b style="color:var(--p0)" id="k1">0</b><span>atrasados</span></div>
-    <div class="kpi" onclick="irPara('vencendo')"><b style="color:var(--p1)" id="k2">0</b><span>até as férias</span></div>
+    <div class="kpi" onclick="irPara('sprint')"><b style="color:var(--p0)" id="k1">0</b><span>dias até 20/11</span></div>
+    <div class="kpi" onclick="irPara('sprint')"><b style="color:var(--p1)" id="k2">0</b><span>sprint aberto</span></div>
     <div class="kpi" onclick="irPara('mencoes')"><b style="color:var(--p2)" id="k3">0</b><span>menções</span></div>
-    <div class="kpi" onclick="irPara('checks')"><b style="color:var(--accent)" id="k4">0</b><span id="k4label">checks</span></div>
+    <div class="kpi" onclick="irPara('atrasados')"><b style="color:var(--accent)" id="k4">0</b><span>atrasados</span></div>
   </div>
 
-  <section id="ferias" style="background:var(--surface);border:1px solid var(--p0);border-radius:12px;padding:16px 18px;margin-bottom:18px;">
-    <h2 style="margin:0 0 6px;">👋 De volta das férias</h2>
-    <p class="nota" style="margin:0;">Hoje é <b>04/11</b>. Os 9 anos estão rodando e o Gatola estreia amanhã. Os 9 anos da Øliver's começam em <b>01/11</b> e o Gatola estreia em <b>05/11</b>.</p>
-  </section>
-
   <section id="hoje">
-    <h2>🟣 Hoje · 04/11</h2>
+    <h2>🟣 Hoje · 06/11</h2>
     <div id="lista-hoje"></div>
   </section>
 
@@ -130,43 +150,54 @@
     <div id="lista-amanha"></div>
   </section>
 
-  <section id="ajustes" style="display:none">
-    <h2><span id="tit-aj"></span></h2>
-    <p class="nota" id="nota-aj"></p>
-    <div id="lista-ajustes"></div>
+  <section id="agenda">
+    <h2>📅 Agenda · próximas datas <span class="count"></span></h2>
+    <p class="nota">Presencial 2 dias por semana até o início de dezembro. Terça e quinta com o Matheus.</p>
+    <div id="lista-agenda"></div>
+  </section>
+
+  <section id="sprint">
+    <h2>🏃 Sprint da transição · até 20/11 <span class="count"></span></h2>
+    <div id="lista-sprint"></div>
+  </section>
+
+  <section id="gabi">
+    <h2>🤝 Transição com a Gabi <span class="count"></span></h2>
+    <p class="nota">Contexto pra pegar até a saída dela. A Gabi fecha o fim de ano; você faz o plano 2027.</p>
+    <div id="lista-gabi"></div>
+  </section>
+
+  <section id="fimdeano">
+    <h2>🎄 Fim de ano · execução da Gabi (acompanhar)</h2>
+    <p class="nota">O que está planejado nas páginas de out/nov/dez. Dê check conforme for rodando.</p>
+    <div id="lista-fimdeano"></div>
+  </section>
+
+  <section id="plano2027">
+    <h2>🎯 Plano de marketing 2027 <span class="count"></span></h2>
+    <div id="lista-plano2027"></div>
+    <details class="bloco"><summary>🗓️ Datas e marcos de 2027 <span class="data" id="n-datas"></span></summary><div class="itens"><table class="datas" id="tab-datas"></table></div></details>
   </section>
 
   <section id="proximos">
-    <h2>🔵 Pendentes de antes das férias <span class="count" id="c-prox"></span></h2>
+    <h2>🔵 Pendentes <span class="count" id="c-prox"></span></h2>
     <div id="lista-proximos"></div>
   </section>
 
-  <section id="novidades">
-    <h2>🆕 O que mudou enquanto você estava fora</h2>
-    <p class="nota">Chegou agora e ainda não tem prazo aqui. A data real fica dentro da própria issue.</p>
+  <section id="novidades" style="display:none">
+    <h2>🆕 Novidades no GitHub</h2>
     <div id="lista-novidades"></div>
   </section>
 
-  <section id="vencendo">
-    <h2>🏖️ Antes das férias · até 15/10 <span class="count" id="c-venc"></span></h2>
-    <div id="lista-vencendo"></div>
-  </section>
-
-  <section id="duranteFerias">
-    <h2>📆 Próximas datas <span class="count" id="c-df"></span></h2>
-    <p class="nota">Precisa estar rodando sozinho, delegado, sem depender de você.</p>
-    <div id="lista-duranteFerias"></div>
-  </section>
-
   <section id="atrasados">
-    <h2>⏰ Atrasados <span class="count" id="c-atr"></span></h2>
+    <h2>⏰ Atrasados no GitHub <span class="count" id="c-atr"></span></h2>
     <div class="filtros" id="filtros"></div>
     <div id="lista-atrasados"></div>
   </section>
 
   <section id="mencoes">
     <h2>📨 Esperando você <span class="count" id="c-men"></span></h2>
-    <p class="nota">Menções suas no GitHub sem resposta. Quem entregou algo está parado até você responder.</p>
+    <p class="nota">Menções suas no GitHub sem resposta.</p>
     <div id="lista-mencoes"></div>
   </section>
 
@@ -178,7 +209,7 @@
 
   <section id="concluidos">
     <h2>✅ Concluídos <span class="count" id="c-con"></span></h2>
-    <p class="nota">Tudo que você já deu check, some da lista original e fica só aqui. Desmarcar aqui devolve pro lugar de origem.</p>
+    <p class="nota">Tudo que você deu check sai da lista original e fica aqui. Desmarcar devolve pro lugar de origem.</p>
     <div id="lista-concluidos"></div>
   </section>
 
@@ -190,18 +221,18 @@
 </div>
 
 <footer>
-  Atualizado por mim, o Theo, a cada check do dia · <span id="rodape"></span>
+  Atualizado por mim, o Theo · <span id="rodape"></span>
 </footer>
 
 <script>
 /* dados embutidos: evita cache do arquivo externo */
-// ✍️ Daily da Manu · dados atualizados a cada check do dia
+// ✍️ Dashboard da Manu · dados atualizados pelo Theo
 const DADOS = {
- "atualizado": "04/11/2026",
- "titulo": "✍️ Daily da Manu · versão Theo",
- "subtitulo": "De volta das férias · Briefing, comunicação e campanhas",
- "labelChecks": "a revisar",
- "tituloChecks": "🔍 Cards que precisam de acerto",
+ "atualizado": "06/11/2026",
+ "titulo": "✍️ Dashboard da Manu · Head de Marketing",
+ "subtitulo": "Time, sprint da transição, fim de ano e plano 2027",
+ "labelChecks": "checks",
+ "tituloChecks": "✅ Checks do board",
  "notaChecks": "Atrasados, menções e checks ainda carregados do raio-x de 01/10, sem reauditoria nova nessa rodada. Avisa se algum já tiver resolvido.",
  "resumo": {
   "atrasados": 33,
@@ -211,88 +242,87 @@ const DADOS = {
  },
  "hojeManual": [
   {
-   "t": "Corrida do Pelé (14/11) · Øliver's: confirmar o brinde e se a Gabi mandou os cartões pro financeiro e pra gráfica",
-   "c": "cs-olivers#240",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/240",
-   "tag": "OLV",
-   "n": "Cartão feito em 03/11. Nada registrado no GitHub sobre o brinde da Øliver's.",
-   "d": "04/11",
-   "p": "P0"
+   "t": "16h/17h · Reunião com o Matheus e a Gabi · assinaturas do marketing",
+   "n": "CapCut Pro, cursos, ferramentas: mapear e pegar acesso a tudo.",
+   "d": "06/11",
+   "p": "P0",
+   "tag": "S7"
   },
   {
-   "t": "Corrida do Pelé (14/11) · Ogro: vale burger pra produção e pagamento",
-   "c": "cs-ogro-steaks#1",
-   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/1#issuecomment-6533021096",
+   "t": "Victor · mandar a página de inauguração e os links da Ogro pra ele estudar",
+   "n": "Perguntar à Gabi se quer acrescentar algo e se a Cleo complementa. Ele chega segunda bem briefado.",
+   "d": "06/11 sex",
+   "p": "P0",
    "tag": "OGRO",
-   "n": "Cartão feito em 03/11. QR pro Linktree. Gabi manda pra produção e financeiro.",
-   "d": "04/11",
-   "p": "P0"
-  },
-  {
-   "t": "🚨 Gatola estreia amanhã (05/11): conferir caixa, impressos e post",
-   "c": "cs-olivers#244",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/244",
-   "tag": "OLV",
-   "n": "Nada registrado no GitHub desde 14/10 (#244 e #242).",
-   "d": "04/11",
-   "p": "P0"
-  },
-  {
-   "t": "Iago: pedido grande pra festa de Halloween de 06/11",
-   "c": "cs-olivers#245",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/245",
-   "tag": "OLV",
-   "n": "Pedido na Central tinha que entrar até hoje. Outubro: Øliver's usada, Lang's e TMK não; conteúdo de outubro pendente.",
-   "d": "04/11",
-   "p": "P0"
-  },
-  {
-   "t": "Inauguração Ogro SG: alinhar com a Gabi como fica (designer freela, data, influs)",
    "c": "cs-ogro-steaks#14",
-   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/14#issuecomment-6503988477",
-   "tag": "OGRO",
-   "n": "Demais brindes e artes vão pro designer freela. Data suspensa desde 27/10. Influs (14 perfis, R$ 2.800 a 3.100) esperando a Gabi. Sub-issues #27 a #30.",
-   "d": "04/11",
-   "p": "P0"
+   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/14"
   },
   {
-   "t": "9 anos em andamento: conferir o que já saiu e o que falta",
-   "c": "cs-olivers#241",
-   "u": "https://dev-seven7.github.io/olivers-9anos-calendario/",
+   "t": "Ecobag da Corrida do Pelé · aprovar pra produção + comprovante de pagamento",
+   "n": "OryLab.",
+   "d": "06/11",
+   "p": "P0",
    "tag": "OLV",
-   "n": "Hoje 04/11: Deborah (Maricá). Amanhã 05/11: Gatola no feed, 9 anos nos stories. Sem influ: Itaipuaçu, Alcântara, Lapa. Cupom 9ANOSOLV só com aprovação da Alline.",
-   "d": "04/11",
-   "p": "P0"
+   "c": "cs-ogro-steaks#1",
+   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/1#issuecomment-6644221446"
   },
   {
-   "t": "Responder as menções sem resposta",
-   "c": "",
-   "u": "",
-   "tag": "S7",
-   "n": "• Otávio (30/10, TMK#248): a Bianca recebe o almoço em 06/11. Ele pergunta se é pra mandar duas vezes\n• Luiza (30/10, #241): calendário dos 9 anos atualizado com a v2 + quem faz qual loja\n• Luiza (29/10, ogro#14): influs de SG parados esperando a Gabi (valor e formato); data suspensa\n• Luiza (29/10, rob#117): +10 criativos do ROB validados pela Gabi, só falta agendar; saiu o post \"Vem aí Øliver's Piratininga\"\n• Gabi (30/10, ogro#1): vale burger da Ogro na corrida, design da Manu (feito em 03/11)\n• Luiza (16 e 23/10, #245): pedidos do Iago, Presente Copa e Nat Bianchi/Ingryd (só ciência)",
-   "d": "04/11",
-   "p": "P1"
-  },
-  {
-   "t": "Grupo ROB: agendar os +10 criativos validados (2 anos do ROB saiu em 01/11?)",
-   "c": "cs-rob-food#117",
-   "u": "https://github.com/dev-seven7/cs-rob-food/issues/117#issuecomment-6503987053",
-   "tag": "ROB",
+   "t": "Julia · mensagem com a correção da cartela de adesivos da Øliver's",
    "n": "",
-   "d": "04/11",
-   "p": "P1"
+   "d": "06/11",
+   "p": "P0",
+   "tag": "OLV",
+   "c": "julia-design-demandas",
+   "u": "https://dev-seven7.github.io/julia-design-demandas/#adesivos"
   },
   {
-   "t": "Piratininga: acompanhar valores e formato das influs (Luiza, até 06/11)",
-   "c": "cs-olivers#229",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/229#issuecomment-6509260571",
+   "t": "Julia · mandar a página de demandas (com o checklist de assets)",
+   "n": "Ela confere se tem logos, fotos de produto e o resto antes de começar.",
+   "d": "06/11",
+   "p": "P0",
    "tag": "OLV",
-   "n": "Inauguração pode ir pro fim de novembro/início de dezembro.",
-   "d": "30/10",
-   "p": "P1"
+   "c": "julia-design-demandas",
+   "u": "https://dev-seven7.github.io/julia-design-demandas/"
+  },
+  {
+   "t": "Mandar os escopos (Manu, Luiza, Otávio) pro Matheus no WhatsApp",
+   "n": "Texto pronto no chat com o Theo.",
+   "d": "06/11",
+   "p": "P0",
+   "tag": "S7"
+  },
+  {
+   "t": "Lang's · confirmação do Matheus depois da conversa com o sócio (descontinuar ou não)",
+   "n": "",
+   "d": "06/11",
+   "p": "P1",
+   "tag": "LANGS",
+   "c": "cs-langs#87",
+   "u": "https://github.com/dev-seven7/cs-langs/issues/87"
+  },
+  {
+   "t": "Coca-Cola (Jorge): marcar o contato da semana que vem",
+   "n": "Natal e Ano Novo. Contar as garrafinhas da Coca no escritório.",
+   "d": "06/11",
+   "p": "P1",
+   "tag": "OLV",
+   "c": "cs-olivers#243",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/243"
+  },
+  {
+   "t": "Relatório de social de outubro (Luiza): conferir",
+   "n": "Temakeria e Ogro fechados.",
+   "d": "06/11",
+   "p": "P2",
+   "tag": "S7",
+   "c": "governance-s7#85",
+   "u": "https://github.com/dev-seven7/governance-s7/issues/85#issuecomment-6668501469"
   }
  ],
  "hoje": [],
+ "amanha": [],
+ "novidades": [],
+ "vencendo": [],
  "proximos": [
   {
    "t": "Cartão VIP da Corrida do Pelé (Øliver's + Ogro): definir o presente e fazer a arte (você)",
@@ -376,44 +406,511 @@ const DADOS = {
    "p": ""
   }
  ],
- "novidades": [
+ "agenda": [
   {
-   "t": "Seven7 descontinuada · reestruturação do marketing",
-   "c": "setor-marketing#140",
-   "u": "https://github.com/dev-grupo-olv/setor-marketing/issues/140",
-   "tag": "S7",
-   "n": "Tráfego com a Ghost: Øliver's, expansão ROB e TMK Araruama (3 meses). Lang's, TMK SG e Ogro sem definição. A Ghost cancelou as issues de Meta da Ogro em 27/10."
+   "t": "Victor e Otávio começam nos escopos novos + agente do Otávio",
+   "n": "Victor: analista da Ogro. Otávio: produtor de conteúdo.",
+   "d": "09/11 seg",
+   "p": "P0",
+   "tag": "S7"
   },
   {
-   "t": "Ogro SG: inauguração de 06/11 suspensa",
+   "t": "Cartão VIP da Corrida do Pelé na gráfica (você faz a arte)",
+   "n": "80 VIPs. Definir o presente e o cupom de cada marca.",
+   "d": "09/11 seg",
+   "p": "P0",
+   "tag": "OGRO",
+   "c": "cs-ogro-steaks#1",
+   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/1#issuecomment-6670497784"
+  },
+  {
+   "t": "Briefings da Ogro SG pra Julia (panfleto, cartão de retrovisor, 5 estáticos)",
+   "n": "Impressos com ela até 11/11, estáticos até 13/11.",
+   "d": "09/11 seg",
+   "p": "P0",
+   "tag": "OGRO",
+   "c": "julia-design-demandas",
+   "u": "https://dev-seven7.github.io/julia-design-demandas/#ogro-sg"
+  },
+  {
+   "t": "Contato com a Coca-Cola (Jorge) · Natal e Ano Novo",
+   "d": "semana de 09/11",
+   "p": "P0",
+   "tag": "OLV"
+  },
+  {
+   "t": "Reunião mensal de metas do ROB + confraternização dos 2 anos",
+   "n": "Pauta de marketing: fechamento de outubro + plano de novembro (e adiantar dezembro).",
+   "d": "10/11 ter",
+   "p": "P0",
+   "tag": "ROB",
+   "c": "cs-rob-food#113",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/113#issuecomment-6644423309"
+  },
+  {
+   "t": "Corrida do Futebol Light · Edição Pelé (Maracanã, 16h30 às 22h)",
+   "n": "Você vai. Øliver's + Ogro na área VIP.",
+   "d": "14/11 sáb",
+   "p": "P0",
+   "tag": "OGRO",
+   "c": "cs-ogro-steaks#1",
+   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/1"
+  },
+  {
+   "t": "Fotos do cardápio novo da Temakeria (produtos com camarão)",
+   "d": "19/11 qui",
+   "p": "P1",
+   "tag": "TMK"
+  },
+  {
+   "t": "Saída da Gabi · inauguração Ogro SG · início do seu escopo · esboço do plano 2027",
+   "n": "Gabi sai a princípio em 20/11 (pode ser um pouco depois).",
+   "d": "20/11 sex",
+   "p": "P0",
+   "tag": "S7",
    "c": "cs-ogro-steaks#14",
-   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/14#issuecomment-6455064691",
-   "tag": "OGRO",
-   "n": "Sem cardápio, o marketing vai sugerir um. Tudo parado até a nova data; 14 influs e orçamento de R$ 2.800 a 3.100 guardados."
+   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/14"
   },
   {
-   "t": "🚨 Lapa: conta de anúncios parada desde 13/10",
-   "c": "cs-olivers#95",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/95#issuecomment-6351123478",
-   "tag": "OLV",
-   "n": "Meta suspendeu por pendência de pagamento."
+   "t": "Reunião de fechamento 2026 / planejamento 2027 com o Matheus (data a confirmar)",
+   "n": "Levar: Réveillon, recesso do time, sua viagem.",
+   "d": "fim de nov",
+   "p": "P1",
+   "tag": "S7"
   },
   {
-   "t": "Dia do Professor da Ogro resolvido: ganhadora Bárbara",
-   "c": "cs-ogro-steaks#20",
-   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/20#issuecomment-6271703679",
-   "tag": "OGRO",
-   "n": ""
+   "t": "Reunião do ROB · apresentar o plano 2027",
+   "n": "1ª terça de dezembro.",
+   "d": "01/12 ter",
+   "p": "P0",
+   "tag": "ROB"
   },
   {
-   "t": "Relatório social 16 a 22/10",
-   "c": "governance-s7#85",
-   "u": "https://dev-seven7.github.io/relatorio-social-out26/",
-   "tag": "S7",
-   "n": "Temakeria 9,2x a média de setembro; Lang's caiu 85%."
+   "t": "Tudo pronto pro recesso (limite 21/12)",
+   "n": "Calendário planejado, conteúdos editados e prontos pra agendar.",
+   "d": "18 a 21/12",
+   "p": "P0",
+   "tag": "S7"
+  },
+  {
+   "t": "Recesso do time (proposta) · home office",
+   "n": "Luiza ativa no básico (comentários, stories). Analistas em standby. Volta 04/01.",
+   "d": "24/12 a 03/01",
+   "p": "P1",
+   "tag": "S7"
+  },
+  {
+   "t": "Você na Bahia (volta sexta 08/01)",
+   "n": "Alguns lugares sem sinal.",
+   "d": "26/12 a 08/01",
+   "p": "P2",
+   "tag": "S7"
+  },
+  {
+   "t": "Réveillon na loja do Eric (Øliver's Araruama)",
+   "n": "Organização antecipada, alinhar com a Clarissa e pedir ajuda ao Matheus com o Eric. Reservas começam antes.",
+   "d": "31/12",
+   "p": "P0",
+   "tag": "OLV"
+  },
+  {
+   "t": "Reunião do ROB de resultados e metas (pode ser online)",
+   "d": "05/01/2027 ter",
+   "p": "P2",
+   "tag": "ROB"
   }
  ],
- "vencendo": [],
+ "sprint": [
+  {
+   "t": "Plano 2027: esboço pronto pra mostrar ao Matheus",
+   "n": "Marcas: Øliver's, Temakeria, Ogro e Grupo ROB. Base: datas, aniversários, regra dos 8 dias de venda, calendário de produtos novos.",
+   "d": "20/11",
+   "p": "P0",
+   "tag": "S7"
+  },
+  {
+   "t": "Auditoria do Notion · Øliver's, Temakeria e Ogro (modelo do Grupo ROB)",
+   "n": "Acessos, senhas, boleto mensal de marketing, contexto de cada marca, branding e business. Sentar com o Matheus.",
+   "d": "20/11",
+   "p": "P1",
+   "tag": "S7"
+  },
+  {
+   "t": "Entrar nos grupos de franqueados e unidades",
+   "n": "Ver com o Matheus; pedir pra Clarissa e Maria Clara incluírem.",
+   "d": "20/11",
+   "p": "P1",
+   "tag": "S7"
+  },
+  {
+   "t": "Comunicar nos grupos a transição (você assume como Head de Marketing)",
+   "d": "20/11",
+   "p": "P1",
+   "tag": "S7"
+  },
+  {
+   "t": "Confirmar com o Matheus as datas que ele citou (WhatsApp)",
+   "n": "Reunião de fechamento do ano, fechamento do ROB e outras.",
+   "d": "13/11",
+   "p": "P1",
+   "tag": "S7"
+  },
+  {
+   "t": "Levar ao Matheus: recesso do time, sua viagem, Réveillon do Eric",
+   "d": "fim de nov",
+   "p": "P1",
+   "tag": "S7"
+  },
+  {
+   "t": "Matheus: efetivação do Otávio como produtor de conteúdo",
+   "n": "Levar sua proposta (anotada no chat com o Theo).",
+   "d": "13/11",
+   "p": "P1",
+   "tag": "S7"
+  },
+  {
+   "t": "Agenda fixa: terça (reunião ~3h) e quinta (expansão, 2h) com o Matheus",
+   "d": "toda semana",
+   "p": "P2",
+   "tag": "S7"
+  },
+  {
+   "t": "Rotina de estudos (Plano de Estudos 2026-2027)",
+   "n": "Seguir em paralelo ao sprint.",
+   "d": "contínuo",
+   "p": "P2",
+   "tag": "S7"
+  }
+ ],
+ "gabi": [
+  {
+   "t": "Gabi · relações e acordos com a Clarissa (operação e expansão)",
+   "n": "O que está combinado, pendências, como ela trabalha.",
+   "d": "20/11",
+   "p": "P0",
+   "tag": "S7"
+  },
+  {
+   "t": "Gabi · relações e acordos com a Alline (estratégia, margens, cardápio)",
+   "n": "Inclui a reunião semanal de estratégia (segundas).",
+   "d": "20/11",
+   "p": "P0",
+   "tag": "S7",
+   "c": "cs-rob-food#113",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/113"
+  },
+  {
+   "t": "Gabi · grupos (franqueados, unidades) e o que circula em cada um",
+   "d": "20/11",
+   "p": "P1",
+   "tag": "S7"
+  },
+  {
+   "t": "Gabi · know-how das operações (ferramentas, ManyChat, planilhas, landing pages)",
+   "n": "Planilhas novas dos 9 anos em cs-olivers#241.",
+   "d": "20/11",
+   "p": "P1",
+   "tag": "S7",
+   "c": "cs-olivers#241",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/241#issuecomment-6645211143"
+  },
+  {
+   "t": "Gabi · pendências que dependem dela (budget de influs SG, página da Ogro SG, avental do Pelé)",
+   "d": "20/11",
+   "p": "P0",
+   "tag": "S7",
+   "c": "cs-ogro-steaks#14",
+   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/14"
+  },
+  {
+   "t": "Cleo → Theo: Matheus passa as skills e a forma de pensar da Cleo",
+   "d": "20/11",
+   "p": "P2",
+   "tag": "S7"
+  }
+ ],
+ "fimDeAno": [
+  {
+   "emoji": "🍕",
+   "bloco": "Øliver's · Natal com a Coca-Cola, Rabanada, Réveillon",
+   "link": "https://dev-seven7.github.io/olivers-out-nov-dez/",
+   "itens": [
+    {
+     "t": "Fim de ano OLV · 01/12 start Natal Øliver's + Coca-Cola (\"Cabe mais um\")",
+     "n": "Dinâmica com a Coca ainda não fechada.",
+     "c": "cs-olivers#243",
+     "u": "https://github.com/dev-seven7/cs-olivers/issues/243"
+    },
+    {
+     "t": "Fim de ano OLV · confraternizações (combos 4, 6, rodízio, reservas, empresas, amigo secreto)"
+    },
+    {
+     "t": "Fim de ano OLV · Pizza de Rabanada + novidade (torta de maçã ou chocotone)",
+     "n": "Depende de Compras e de foto."
+    },
+    {
+     "t": "Fim de ano OLV · aniversários: 16/12 Niterói 3 anos e Copa 2 anos · 26/12 SG 4 anos · 28/12 CF 5 anos",
+     "n": "Sem issue aberta ainda."
+    },
+    {
+     "t": "Fim de ano OLV · 31/12 Réveillon Araruama e Cabo Frio (lista VIP, reservas, parceiros)"
+    },
+    {
+     "t": "Fim de ano OLV · lojas enfeitadas pro Natal"
+    }
+   ]
+  },
+  {
+   "emoji": "🍣",
+   "bloco": "Temakeria · Recesso Aprovado, Verão, Fuga da Ceia",
+   "link": "https://dev-seven7.github.io/temakeria-out-nov-dez/",
+   "itens": [
+    {
+     "t": "Fim de ano TMK · 01 a 20/12 Recesso Aprovado (combos pra turma)"
+    },
+    {
+     "t": "Fim de ano TMK · 21/12 Modo Recesso (verão, pokes)"
+    },
+    {
+     "t": "Fim de ano TMK · 25 a 30/12 Fuga da Ceia + 31/12 Último Pedido do Ano"
+    },
+    {
+     "t": "Fim de ano TMK · barcos pra casal + itens com camarão (fotos em 19/11)"
+    }
+   ]
+  },
+  {
+   "emoji": "🥩",
+   "bloco": "Ogro · Já deu por 2026",
+   "link": "https://dev-seven7.github.io/ogro-out-nov-dez/",
+   "itens": [
+    {
+     "t": "Fim de ano Ogro · combos pra dividir + resgate do crédito de novembro"
+    },
+    {
+     "t": "Fim de ano Ogro · programa de fidelidade no canal próprio"
+    },
+    {
+     "t": "Fim de ano Ogro · produto novo (shooting e lançamento em dezembro)"
+    },
+    {
+     "t": "Fim de ano Ogro · 09/12 Dia do Profissional da Culinária (Jimmy e Igor)"
+    }
+   ]
+  }
+ ],
+ "plano2027": [
+  {
+   "t": "Plano 2027 · esboço pro Matheus",
+   "d": "20/11",
+   "p": "P0",
+   "tag": "S7"
+  },
+  {
+   "t": "Plano 2027 · rodadas de ajuste com o Matheus (e orientação da Gabi)",
+   "d": "até 30/11",
+   "p": "P1",
+   "tag": "S7"
+  },
+  {
+   "t": "Plano 2027 · versão final apresentada na reunião do ROB",
+   "d": "01/12",
+   "p": "P0",
+   "tag": "ROB"
+  },
+  {
+   "t": "Plano 2027 · calendário de produtos novos por marca (6 a 12) com a assessoria",
+   "n": "Fotos dos produtos de 2027 ainda em 2026.",
+   "d": "dez",
+   "p": "P1",
+   "tag": "S7",
+   "c": "cs-olivers#184",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/184"
+  },
+  {
+   "t": "Plano 2027 · confirmar dias dos aniversários em aberto (Ogro em agosto, TMK SG em setembro, Piratininga)",
+   "d": "dez",
+   "p": "P2",
+   "tag": "S7"
+  }
+ ],
+ "datas2027": [
+  [
+   "09/02 ter",
+   "Carnaval + Dia Mundial da Pizza",
+   "Todas · CARNAVØL de novo"
+  ],
+  [
+   "01/03 seg",
+   "Aniversário do Rio",
+   "Øliver's Copa"
+  ],
+  [
+   "28/03 dom",
+   "Páscoa",
+   "Øliver's (Golden Ticket), TMK"
+  ],
+  [
+   "01/05 sáb",
+   "7 anos Øliver's Itaipuaçu · Dia do Trabalhador",
+   "Øliver's"
+  ],
+  [
+   "09/05 dom",
+   "Dia das Mães",
+   "Todas"
+  ],
+  [
+   "26/05 qua",
+   "Aniversário de Maricá",
+   "Øliver's"
+  ],
+  [
+   "28/05 sex",
+   "Dia do Hambúrguer",
+   "Ogro"
+  ],
+  [
+   "12/06 sáb",
+   "Dia dos Namorados",
+   "Todas (barcos TMK)"
+  ],
+  [
+   "18/06 sex",
+   "Dia do Sushi + Imigração Japonesa",
+   "Temakeria"
+  ],
+  [
+   "jun-jul",
+   "Copa do Mundo Feminina no Brasil (confirmar)",
+   "Todas"
+  ],
+  [
+   "10/07 sáb",
+   "Dia da Pizza",
+   "Øliver's"
+  ],
+  [
+   "26/07 seg",
+   "Dia dos Avós",
+   "Øliver's"
+  ],
+  [
+   "02/08 seg",
+   "2 anos Øliver's Araruama",
+   "Øliver's"
+  ],
+  [
+   "agosto",
+   "7 anos da Ogro (dia em aberto)",
+   "Ogro"
+  ],
+  [
+   "08/08 dom",
+   "Dia dos Pais",
+   "Todas"
+  ],
+  [
+   "11/08 qua",
+   "Dia do Estudante",
+   "Temakeria"
+  ],
+  [
+   "setembro",
+   "3 anos Temakeria SG (dia em aberto)",
+   "Temakeria"
+  ],
+  [
+   "15/09 qua",
+   "Dia do Cliente",
+   "Todas"
+  ],
+  [
+   "26/09 dom",
+   "3 anos Øliver's Alcântara",
+   "Øliver's"
+  ],
+  [
+   "05/10 ter",
+   "1 ano Temakeria Araruama",
+   "Temakeria"
+  ],
+  [
+   "12/10 ter",
+   "Dia das Crianças",
+   "Øliver's"
+  ],
+  [
+   "20/10 qua",
+   "Dia do Chef",
+   "Ogro"
+  ],
+  [
+   "31/10 dom",
+   "Halloween",
+   "Todas"
+  ],
+  [
+   "01/11 seg",
+   "10 anos da Øliver's + 3 anos do Grupo ROB",
+   "Øliver's, ROB"
+  ],
+  [
+   "03/11 qua",
+   "Dia do Sanduíche",
+   "Ogro"
+  ],
+  [
+   "nov",
+   "ENEM 2027 (datas a sair)",
+   "Temakeria"
+  ],
+  [
+   "13/11 sáb",
+   "Aniversário de Cabo Frio",
+   "Øliver's"
+  ],
+  [
+   "22/11 seg",
+   "Aniversário de Niterói",
+   "Øliver's"
+  ],
+  [
+   "26/11 sex",
+   "Black Friday · 29/11 Cyber Monday",
+   "Todas"
+  ],
+  [
+   "08/12 qua",
+   "Dia da Família",
+   "Øliver's"
+  ],
+  [
+   "16/12 qui",
+   "4 anos Øliver's Niterói · 3 anos Copa",
+   "Øliver's"
+  ],
+  [
+   "~20/12 seg",
+   "1 ano Øliver's Piratininga (a confirmar)",
+   "Øliver's"
+  ],
+  [
+   "26/12 dom",
+   "5 anos Øliver's SG",
+   "Øliver's"
+  ],
+  [
+   "28/12 ter",
+   "6 anos Øliver's Cabo Frio",
+   "Øliver's"
+  ],
+  [
+   "25/12 · 31/12",
+   "Natal · Réveillon",
+   "Todas"
+  ]
+ ],
  "atrasados": [
   {
    "t": "OLV · Datas + Campanhas 2026",
@@ -1354,143 +1851,9 @@ const DADOS = {
    "u": "https://github.com/dev-seven7/cs-langs/issues/64"
   }
  ],
- "amanha": [
-  {
-   "t": "10h · Piratininga com a Michelle + Matheus: confirmar com o Matheus se é presencial (visita à unidade) ou online",
-   "c": "cs-olivers#229",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/229#issuecomment-6642648240",
-   "tag": "OLV",
-   "n": "Apresentar os valores da proposta (link atualizado pedido à Gabi). Pode passar do horário.",
-   "d": "05/11",
-   "p": "P0"
-  },
-  {
-   "t": "Depois de Piratininga · Matheus: projeção salarial, plano de carreira e reestruturação do time",
-   "c": "",
-   "u": "",
-   "tag": "S7",
-   "n": "Chegar com meia hora / uma hora de folga pra alinhar com o Victor no escritório.",
-   "d": "05/11",
-   "p": "P0"
-  },
-  {
-   "t": "Victor (novo analista da Ogro) · 1º dia presencial: passar as primeiras prioridades",
-   "c": "cs-ogro-steaks#14",
-   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/14",
-   "tag": "OGRO",
-   "n": "Parecer das primeiras prioridades. Pedir ajuda nas peças da inauguração de SG (criação, comunicação e design, ele é designer) + passar a Corrida do Pelé.",
-   "d": "05/11",
-   "p": "P0"
-  },
-  {
-   "t": "14h · Reunião de Expansão do ROB (Gabi chega ~14h/14h30, médico)",
-   "c": "",
-   "u": "",
-   "tag": "ROB",
-   "n": "Se o Matheus estiver presencial, bater as outras pautas.",
-   "d": "05/11",
-   "p": "P1"
-  },
-  {
-   "t": "Corrida do Pelé: mandar a ecobag pra produção na OryLab + pagamento",
-   "c": "cs-ogro-steaks#1",
-   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/1#issuecomment-6644221446",
-   "tag": "OLV",
-   "n": "Depende do ok da Gabi.",
-   "d": "05/11",
-   "p": "P0"
-  },
-  {
-   "t": "Corrida do Pelé: mandar o avental da Ogro (Jimmy) + fechar o resto do evento",
-   "c": "cs-ogro-steaks#1",
-   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/1#issuecomment-6644221446",
-   "tag": "OGRO",
-   "n": "Cartões VIP (margem do cupom), cartelas de adesivos, adesivo do stand (Edilson), roupa da equipe.",
-   "d": "05/11",
-   "p": "P0"
-  },
-  {
-   "t": "Reunião com a Michelen (Effect Sport) · Corrida do Pelé (14/11), Ogro x Øliver's · tentar no fim do dia",
-   "c": "cs-ogro-steaks#1",
-   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/1#issuecomment-6644221446",
-   "tag": "OGRO",
-   "n": "Pendente, provavelmente 11h30. Melhor no fim do dia, todo mundo junto no escritório.\nPontos pra falar:\n• Liberação da porta: qual porta?\n• Vai ter crachá/pulseira pra equipe/staff?\n• Tem estacionamento?\n• Informações de entrada/saída do evento\n• Logística: como nossos produtos/pedidos vão chegar",
-   "d": "05/11",
-   "p": "P0"
-  },
-  {
-   "t": "Lang's com o Matheus (presencial): pausa/saída, faz ou não faz o calendário de novembro",
-   "c": "cs-langs#87",
-   "u": "https://github.com/dev-seven7/cs-langs/issues/87#issuecomment-6636204252",
-   "tag": "LANGS",
-   "n": "Junto: hambúrguer do mês, Black Friday e cupom NOVIDADELANGS.",
-   "d": "05/11",
-   "p": "P1"
-  },
-  {
-   "t": "Inauguração Ogro SG (20/11): quase nada pronto, definir as próximas demandas pro Vini e o que fica com o Victor",
-   "c": "cs-ogro-steaks#14",
-   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/14",
-   "tag": "OGRO",
-   "n": "Vini recebeu os briefings do Gatola em 04/11; depois dessas entregas, as próximas demandas dele devem ser o lançamento da Ogro SG.",
-   "d": "05/11",
-   "p": "P0"
-  }
- ],
- "duranteFerias": [
-  {
-   "t": "Halloween · After Dark, Ogro, Lang's, Temakeria",
-   "c": "",
-   "u": "",
-   "tag": "S7",
-   "n": "",
-   "d": "31/10",
-   "p": "P0"
-  },
-  {
-   "t": "9 anos da Øliver's começa + 2 anos do Grupo ROB",
-   "c": "cs-olivers#241",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/241",
-   "tag": "OLV",
-   "n": "",
-   "d": "01/11",
-   "p": "P0"
-  },
-  {
-   "t": "Estreia do Gatola da Cartola",
-   "c": "cs-olivers#244",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/244",
-   "tag": "OLV",
-   "n": "Material precisa chegar antes.",
-   "d": "05/11",
-   "p": "P0"
-  },
-  {
-   "t": "Fim da campanha dos 9 anos",
-   "c": "cs-olivers#241",
-   "u": "",
-   "tag": "OLV",
-   "n": "",
-   "d": "09/11"
-  },
-  {
-   "t": "Øliver's Piratininga · inauguração (sem data, meados de novembro)",
-   "c": "cs-olivers#229",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/229",
-   "tag": "OLV",
-   "n": "",
-   "d": "nov"
-  },
-  {
-   "t": "Ogro São Gonçalo · nova data a definir",
-   "c": "cs-ogro-steaks#14",
-   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/14",
-   "tag": "OGRO",
-   "n": "",
-   "d": "?"
-  }
- ]
-};;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</script>
+ "duranteFerias": []
+};
+</script>
 <script>
 const $ = (s)=>document.querySelector(s);
 const esc = (s)=>String(s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
@@ -1551,18 +1914,13 @@ function atualizaProgresso(){
 function irPara(id){ document.getElementById(id).scrollIntoView({behavior:"smooth"}); }
 
 // ---- render
-document.title = (DADOS.titulo||"Daily").replace(/[^\p{L}\s·]/gu,"").trim() + " · Seven7";
+document.title = "Dashboard · Manu";
 $("#titulo").textContent = DADOS.titulo || "Daily";
 $("#sub").textContent = (DADOS.subtitulo? DADOS.subtitulo+" · " : "") + "Atualizado em " + DADOS.atualizado;
-$("#k4label").textContent = DADOS.labelChecks || "checks";
 $("#tit-chk").textContent = DADOS.tituloChecks || "✅ Checks";
 $("#nota-chk").innerHTML = DADOS.notaChecks || "";
 $("#rodape").textContent = DADOS.atualizado;
-$("#k1").textContent = DADOS.atrasados.length;
-$("#k2").textContent = DADOS.vencendo.length;
 $("#k3").textContent = DADOS.mencoes.length;
-$("#k4").textContent = DADOS.resumo.checks;
-$("#c-venc").textContent = DADOS.vencendo.length + " cards";
 $("#c-atr").textContent = DADOS.atrasados.length + " cards";
 $("#c-men").textContent = DADOS.mencoes.length + " pessoas";
 $("#c-chk").textContent = DADOS.resumo.checks + " abertos";
@@ -1572,8 +1930,10 @@ const SECOES_CARD = [
   {key:"amanha", sec:"amanha", vazio:null, urgente:true, itens: DADOS.amanha||[], label:"Amanhã"},
   {key:"proximos", sec:"proximos", vazio:null, itens: DADOS.proximos||[], label:"Até sexta"},
   {key:"novidades", sec:"novidades", vazio:null, itens: DADOS.novidades||[], label:"Novidades"},
-  {key:"vencendo", sec:"vencendo", vazio:null, itens: DADOS.vencendo||[], label:"Antes das férias"},
-  {key:"duranteFerias", sec:"duranteFerias", vazio:"Nada registrado ainda.", itens: DADOS.duranteFerias||[], label:"Durante as férias"},
+  {key:"agenda", sec:"agenda", vazio:"Agenda em dia.", itens: DADOS.agenda||[], label:"Agenda"},
+  {key:"sprint", sec:"sprint", vazio:"Sprint fechado!", itens: DADOS.sprint||[], label:"Sprint"},
+  {key:"gabi", sec:"gabi", vazio:"Transição com a Gabi concluída.", itens: DADOS.gabi||[], label:"Transição Gabi"},
+  {key:"plano2027", sec:"plano2027", vazio:"Plano 2027 pronto!", itens: DADOS.plano2027||[], label:"Plano 2027"},
   {key:"atrasados", sec:"atrasados", vazio:null, itens: DADOS.atrasados||[], label:"Atrasados"}
 ];
 
@@ -1600,10 +1960,9 @@ function renderCards(){
         return html.replace('<span class="tag">', `<span class="tag" style="background:var(--ok-bg,#e8f3ea)">${esc(origem)}</span><span class="tag">`);
       }).join("")
     : '<p class="nota">Nada concluído ainda.</p>';
-  $("#k1").textContent = SECOES_CARD.find(s=>s.key==="atrasados").itens.filter(o=>!marcado(o.t)).length;
-  $("#k2").textContent = SECOES_CARD.find(s=>s.key==="vencendo").itens.filter(o=>!marcado(o.t)).length;
+  $("#k4").textContent = SECOES_CARD.find(s=>s.key==="atrasados").itens.filter(o=>!marcado(o.t)).length;
+  $("#k2").textContent = SECOES_CARD.find(s=>s.key==="sprint").itens.filter(o=>!marcado(o.t)).length;
   $("#c-atr").textContent = SECOES_CARD.find(s=>s.key==="atrasados").itens.filter(o=>!marcado(o.t)).length + " cards";
-  $("#c-venc").textContent = SECOES_CARD.find(s=>s.key==="vencendo").itens.filter(o=>!marcado(o.t)).length + " cards";
 }
 
 if(DADOS.ajustes){
@@ -1649,6 +2008,19 @@ $("#filtros").addEventListener("click", e=>{
   const sec=document.getElementById(id); if(!sec) return;
   if(!sec.querySelector(".card,.item,.l")) sec.style.display="none";
 });
+
+// dias até 20/11
+(function(){ const alvo=new Date(2026,10,20); const hoje=new Date(); hoje.setHours(0,0,0,0);
+  const dias=Math.max(0,Math.round((alvo-hoje)/86400000)); $("#k1").textContent=dias; })();
+// fim de ano (blocos com check)
+$("#lista-fimdeano").innerHTML = (DADOS.fimDeAno||[]).map(b=>
+  `<details class="bloco"><summary><span>${b.emoji||""} ${esc(b.bloco)} ${b.link?`<a href="${b.link}" target="_blank" onclick="event.stopPropagation()">página ↗</a>`:""}</span> <span class="prog">0/${b.itens.length}</span></summary>
+   <div class="itens">${b.itens.map(o=>itemHTML({...o,t:o.t})).join("")}</div></details>`).join("");
+// datas 2027
+$("#tab-datas").innerHTML = (DADOS.datas2027||[]).map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join("");
+$("#n-datas").textContent = (DADOS.datas2027||[]).length+" datas";
+document.querySelectorAll("#lista-fimdeano .chk").forEach(el=>el.addEventListener("change",()=>{
+  const it=el.closest(".item"); it.classList.toggle("done",el.checked); atualizaProgresso(); }));
 atualizaProgresso();
 </script>
 </body>
