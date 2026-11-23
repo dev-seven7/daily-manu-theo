@@ -3618,6 +3618,7 @@ function cardHTML(o, opts={}){
 function toggle(el){
   const id = el.dataset.key;
   try{ localStorage.setItem(id, el.checked?"1":"0") }catch(e){}
+  syncEnvia(id, el.checked, el.closest(".card,.item")?.querySelector(".t")?.textContent||id);
   renderCards();
   atualizaProgresso();
 }
@@ -3758,6 +3759,30 @@ $("#n-datas").textContent = (DADOS.datas2027||[]).length+" datas";
 document.querySelectorAll("#lista-fimdeano .chk").forEach(el=>el.addEventListener("change",()=>{
   const it=el.closest(".item"); it.classList.toggle("done",el.checked); atualizaProgresso(); }));
 atualizaProgresso();
+// ===== checks sincronizados (Worker checks-time-mkt, board manu) =====
+const SYNC='https://checks-time-mkt.grupo-rob-mkt.workers.dev/s/manu';
+const hsh=t=>{let h=5381;for(const c of String(t))h=((h<<5)+h+c.charCodeAt(0))|0;return 'm-'+(h>>>0).toString(36)};
+function syncMsg(ok,m){let e=document.getElementById('sync-manu'); if(!e){e=document.createElement('div');e.id='sync-manu';
+  e.style.cssText='position:fixed;right:12px;bottom:12px;font:600 12px/1.4 system-ui;padding:6px 10px;border-radius:8px;background:var(--surface,#171a21);border:1px solid var(--line,#2a2f3a);z-index:50';document.body.appendChild(e)}
+  e.textContent=m; e.style.color=ok?'var(--ok,#3ecf8e)':'#ffa53d'}
+async function syncEnvia(id,v,t){ try{const r=await fetch(SYNC,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({k:hsh(id),v,t:String(t).slice(0,150),by:'Manu'})}); if(!r.ok)throw 0; syncMsg(true,'✓ checks sincronizados')}catch(e){syncMsg(false,'sem conexão: check salvo só neste navegador')} }
+async function syncPuxa(){
+  try{const r=await fetch(SYNC,{cache:'no-store'}); if(!r.ok)throw 0; const j=await r.json();
+    let migrou=false; try{migrou=localStorage.getItem('dg-sync-migrou')==='1'}catch(e){}
+    const els=[...document.querySelectorAll('.chk[data-key]')];
+    if(!migrou){ // 1ª vez: sobe o que já estava marcado neste navegador
+      const vistos=new Set(); for(const el of els){const id=el.dataset.key; if(vistos.has(id))continue; vistos.add(id);
+        let loc=false; try{loc=localStorage.getItem(id)==='1'}catch(e){}
+        if(loc && !j[hsh(id)]){ await syncEnvia(id,true,el.closest('.card,.item')?.querySelector('.t')?.textContent||id); j[hsh(id)]={} } }
+      try{localStorage.setItem('dg-sync-migrou','1')}catch(e){} }
+    for(const el of els){const id=el.dataset.key, v=!!j[hsh(id)];
+      try{localStorage.setItem(id,v?'1':'0')}catch(e){}
+      if(el.checked!==v){el.checked=v; el.closest('.card,.item')?.classList.toggle('done',v)} }
+    try{renderCards()}catch(e){} try{atualizaProgresso()}catch(e){}
+    syncMsg(true,'✓ checks sincronizados');
+  }catch(e){syncMsg(false,'sem conexão: checks salvos só neste navegador')}
+}
+syncPuxa(); setInterval(syncPuxa,30000);
 </script>
 </body>
 </html>
