@@ -143,7 +143,7 @@
   </div>
 
   <section id="hoje">
-    <h2>🟣 Hoje · quinta, 26/11</h2>
+    <h2>🟣 Hoje · sexta, 27/11</h2>
     <div id="lista-hoje"></div>
   </section>
 
@@ -161,7 +161,7 @@
   </section>
 
   <section id="amanha" style="display:none">
-    <h2>⚪ Amanhã · sex 27/11</h2>
+    <h2>⚪ Amanhã</h2>
     <div id="lista-amanha"></div>
   </section>
 
@@ -243,7 +243,7 @@
 /* dados embutidos: evita cache do arquivo externo */
 // ✍️ Dashboard da Manu · dados atualizados pelo Theo
 const DADOS = {
- "atualizado": "26/11 · quinta 17h30 (depois do dia de reuniões)",
+ "atualizado": "26/11 · quinta à noite (pra sex 27/11)",
  "titulo": "✍️ Dashboard da Manu · Head de Marketing",
  "subtitulo": "Semana 23 a 27/11 · Black Friday, Réveillon, Ogro SG, analista novo e plano 2027",
  "labelChecks": "checks",
@@ -257,98 +257,149 @@ const DADOS = {
  },
  "hojeManual": [
   {
-   "t": "🔴 Mandar no grupo a mensagem de fechamento pro time (qui 26 e sex 27/11) com o painel e as dailies",
-   "d": "26/11",
+   "t": "🖤 Black Friday oficial: revelação nos stories + influs postando + campanha iFood (27 e 28/11)",
+   "d": "27/11",
+   "p": "P0",
+   "tag": "ROB"
+  },
+  {
+   "t": "🔴 Black Friday: conferir se o Databite saiu e se a Black da Øliver's no salão/rodízio fechou (ficaram de ontem)",
+   "d": "27/11",
+   "p": "P0",
+   "tag": "ROB",
+   "n": "Databite: comunicação de marketing das 3 marcas, só delivery / só salão. Salão/rodízio: com o Matheus e a Alline."
+  },
+  {
+   "t": "🔴 Influs da Black: conferir quem recebeu e quem posta hoje (Luiza)",
+   "d": "27/11",
+   "p": "P0",
+   "tag": "ROB",
+   "n": "3 Øliver's, 2 Ogro (Quezia Couto + Bia Dits), 3 Temakeria (Iago já postou, Quezia Machado). Pedidos de parceiro: mandar pro THEO registrar no controle."
+  },
+  {
+   "t": "🔴 Escopo do Emeric como analista: definir e alinhar (agora focado na Temakeria)",
+   "d": "27/11",
    "p": "P0",
    "tag": "S7",
-   "n": "Mensagem pronta no chat do painel do time.",
-   "c": "painel do time",
-   "u": "https://dev-seven7.github.io/time-marketing-rob/"
+   "c": "daily do Emeric",
+   "u": "https://dev-seven7.github.io/daily-emeric-theo/"
   },
   {
-   "t": "🔴 Influs da Black Friday: enviar os pedidos hoje pra postarem amanhã (sex 27/11)",
-   "d": "26/11",
+   "t": "🔴 Escopo da Eduarda como analista da Øliver's: definir e alinhar",
+   "d": "27/11",
    "p": "P0",
-   "tag": "ROB",
-   "n": "Em andamento, Luiza vendo hoje. Temakeria: 1 pedido já enviado hoje + Quezia Machado hoje. Øliver's: Luiza fechando as influs. Ogro: Quezia Couto e Bia Dits. Iago posta hoje.",
-   "c": "cs-olivers#240",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/240"
-  },
-  {
-   "t": "🔴 Influs da Black: confirmar com cada um se recebe hoje ou amanhã e quando posta (Luiza)",
-   "d": "26/11",
-   "p": "P0",
-   "tag": "ROB",
-   "n": "3 Øliver's (fechando), 2 Ogro (Quezia Couto + Bia Dits), 3 Temakeria (Iago já postou, Quezia Machado recebe hoje)."
-  },
-  {
-   "t": "🔴 Databite Black Friday: enviar hoje a comunicação de marketing das 3 marcas (só delivery / só salão) · a Black é amanhã",
-   "d": "26/11",
-   "p": "P0",
-   "tag": "ROB",
-   "n": "Alinhado com a Alline em 24/11: ela comunica CMV, custo e bonificação; a comunicação de marketing é sua. Texto base pronto no chat do THEO (23/11)."
-  },
-  {
-   "t": "🔴 Black Friday Øliver's no salão/rodízio: fechar hoje com o Matheus e a Alline",
-   "d": "26/11",
-   "p": "P0",
-   "tag": "OLV"
-  },
-  {
-   "t": "🔴 Ogro SG: mandar a mensagem pra gráfica (lote maior de cartões de retrovisor pras 4 marcas, 250 da Ogro pra qua 02/12) + a mensagem pro Matheus com o fechamento e o link da página",
-   "d": "26/11",
-   "p": "P0",
-   "tag": "OGRO",
-   "n": "Antes de mandar: conferir as ecobags (mudou a quantidade desde ontem) e corrigir o erro no verso do panfleto (texto do desconto). Mensagens prontas no chat da página de parceiros.",
-   "c": "parceiros Ogro SG",
-   "u": "https://dev-seven7.github.io/ogro-sg-parceiros/"
-  },
-  {
-   "t": "Ogro SG: divisão de pagamentos dos influs pagos (NitDicas e SG pro Mundo) pro financeiro, por unidade e franqueadora · demais parceiros em permuta",
-   "d": "26/11",
-   "p": "P1",
-   "tag": "OGRO",
-   "c": "parceiros Ogro SG",
-   "u": "https://dev-seven7.github.io/ogro-sg-parceiros/"
-  },
-  {
-   "t": "Call do time de hoje (Fathom): registrar o resumo na issue certa e marcar as pessoas",
-   "d": "26/11",
-   "p": "P1",
-   "tag": "S7",
-   "n": "O link do Fathom não abriu pelo agente: abrir pelo navegador ou colar o resumo no chat da daily do Emeric."
-  },
-  {
-   "t": "Duda: mandar os links do GitHub das frentes da Øliver's com resumo de status + aviso da auditoria geral de prazos",
-   "d": "26/11",
-   "p": "P1",
    "tag": "OLV",
    "c": "daily da Duda",
    "u": "https://dev-seven7.github.io/daily-eduarda-theo/"
   },
   {
-   "t": "Emeric e Duda nos grupos de WhatsApp (Rob Food Marketing · OLV Marketing Ghost Lab · Marketing central) + revisar se falta algum",
-   "d": "26/11",
-   "p": "P1",
-   "tag": "S7"
+   "t": "Duda: onboarding técnico (agente) com o Matheus + call com você pra fechar o calendário de dezembro da Øliver's + começar os conteúdos da Pizza de Rabanada (reels, stories, foto do cardápio, banners iFood, 99 e site)",
+   "d": "27/11",
+   "p": "P0",
+   "tag": "OLV",
+   "n": "Confirmar com a operação se os insumos chegam nas lojas pro lançamento em 01/12. O Emeric fica fora dessa call.",
+   "c": "cs-olivers#264",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/264"
   },
   {
-   "t": "Pedidos de parceiro de hoje (Black Friday): mandar pro THEO registrar no controle",
-   "d": "26/11",
-   "p": "P1",
-   "tag": "S7"
+   "t": "Peças da Clarissa: aprovar com o Matheus uniformes, broches, pulseira à la carte e roleta (+ cartão do japonês) e passar o feedback pra Julia",
+   "d": "27/11",
+   "p": "P0",
+   "tag": "OLV",
+   "c": "cs-olivers#239",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/239"
   },
   {
-   "t": "Fim de semana (sáb 28 e dom 29): Luiza e Otávio mandam feed + stories das 3 marcas até sexta pra você agendar · inclui o story de domingo da Temakeria (11h03)",
-   "d": "26/11",
+   "t": "OLV Sushi: fechar a identidade visual com a Julia",
+   "d": "27/11",
+   "p": "P0",
+   "tag": "OLV"
+  },
+  {
+   "t": "🔴 Ogro SG · fechar com o Matheus e o financeiro: pagamento dos brindes da inauguração + pagamento dos influs (NitDicas com o orçamento dividido por marca; SG pro Mundo por unidade)",
+   "d": "27/11",
+   "p": "P0",
+   "tag": "OGRO",
+   "n": "Demais parceiros em permuta. Valores e divisão na página de parceiros.",
+   "c": "parceiros Ogro SG",
+   "u": "https://dev-seven7.github.io/ogro-sg-parceiros/"
+  },
+  {
+   "t": "🔴 Ogro SG: fechar os influenciadores pra receberem no dia 03 ou 04/12",
+   "d": "27/11",
+   "p": "P0",
+   "tag": "OGRO",
+   "c": "parceiros Ogro SG",
+   "u": "https://dev-seven7.github.io/ogro-sg-parceiros/"
+  },
+  {
+   "t": "🔴 Ogro SG: mandar a mensagem pra gráfica (lote de cartões de retrovisor pras 4 marcas, 250 da Ogro pra qua 02/12) + a do Matheus com o fechamento",
+   "d": "27/11",
+   "p": "P0",
+   "tag": "OGRO",
+   "n": "Se ainda não saíram ontem. Panfleto: 2.500, distribuídos nos pedidos da Ogro e também da Øliver's e da Temakeria (decidido na call de 26/11). Antes: conferir as ecobags e corrigir o verso do panfleto (texto do desconto).",
+   "c": "parceiros Ogro SG",
+   "u": "https://dev-seven7.github.io/ogro-sg-parceiros/"
+  },
+  {
+   "t": "Ogro SG: confirmar se o Jimmy e o Igor estarão lá pra fazer as entregas dos primeiros pedidos de SG",
+   "d": "27/11",
    "p": "P1",
-   "tag": "ROB",
+   "tag": "OGRO",
+   "c": "cs-ogro-steaks#14",
+   "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/14"
+  },
+  {
+   "t": "TikTok: passar o acesso pra Duda e subir a senha no 1Password",
+   "d": "27/11",
+   "p": "P1",
+   "tag": "OLV"
+  },
+  {
+   "t": "Emeric: começa a Temakeria (calendário de dezembro, SushiTone, TikTok) + 30 min passando os cards da Øliver's pra Duda",
+   "d": "27/11",
+   "p": "P1",
+   "tag": "TMK",
+   "c": "daily do Emeric",
+   "u": "https://dev-seven7.github.io/daily-emeric-theo/"
+  },
+  {
+   "t": "Iniciar conteúdos e edição dos produtos de Natal: Pizza de Rabanada, SushiTone e Ogro Bells",
+   "d": "27/11",
+   "p": "P1",
+   "tag": "ROB"
+  },
+  {
+   "t": "Agendar o fim de semana das 3 marcas + story de domingo da Temakeria",
+   "d": "27/11",
+   "p": "P1",
+   "tag": "ROB"
+  },
+  {
+   "t": "Réveillon Araruama: precificação fechada até segunda (Alline, Clarissa e Matheus) → criativos de fundo, LP e campanha na 1ª semana de dezembro",
+   "d": "27/11",
+   "p": "P0",
+   "tag": "OLV",
+   "c": "cs-olivers#160",
+   "u": "https://github.com/dev-seven7/cs-olivers/issues/160"
+  },
+  {
+   "t": "Mensagem de fechamento pro grupo do time + Emeric e Duda nos grupos de WhatsApp (se não foi ontem)",
+   "d": "27/11",
+   "p": "P1",
+   "tag": "S7",
    "c": "painel do time",
    "u": "https://dev-seven7.github.io/time-marketing-rob/"
   },
   {
+   "t": "Call com a Gabi (1h) pra dar o overview de toda a marca Øliver's pra Eduarda · aguardando data",
+   "d": "27/11",
+   "p": "P2",
+   "tag": "OLV"
+  },
+  {
    "t": "Ogro Black: garantir que o Victor fecha o horário de abertura com a Alline (proposta 17h30 Lista VIP, 19h30 todo mundo) e o estoque do P.C.Q por unidade com o Igor",
-   "d": "26/11",
+   "d": "27/11",
    "p": "P2",
    "tag": "OGRO",
    "c": "caderno Victor",
@@ -356,7 +407,7 @@ const DADOS = {
   },
   {
    "t": "Fotos pro iFood das promos da Black Friday: ver a resposta da Alline e mandar o que faltar (Ogro, Øliver's, Temakeria)",
-   "d": "26/11",
+   "d": "27/11",
    "p": "P2",
    "tag": "ROB",
    "n": "Perguntado à Alline em 23/11. As do cardápio próprio ela já tem.",
@@ -365,7 +416,7 @@ const DADOS = {
   },
   {
    "t": "Cardápio digital da Ogro: olhar com o Matheus e o Victor depois da call das 16h com a Alline, antes de mandar pro João",
-   "d": "26/11",
+   "d": "27/11",
    "p": "P2",
    "tag": "OGRO",
    "c": "cs-ogro-steaks#14",
@@ -373,89 +424,19 @@ const DADOS = {
   },
   {
    "t": "Evento 99Food: terminar o conteúdo pro Grupo ROB (já saiu meio story) + guardar os números do 1º ano da 99 no Rio e as projeções pra 2027 pro plano 2027",
-   "d": "26/11",
+   "d": "27/11",
    "p": "P2",
    "tag": "ROB"
   },
   {
    "t": "Plano de marketing 2027: retomar com o THEO o que já foi iniciado (entrega com o Matheus na semana que vem)",
-   "d": "26/11",
+   "d": "27/11",
    "p": "P2",
    "tag": "S7"
   }
  ],
  "hoje": [],
- "amanha": [
-  {
-   "t": "🖤 Black Friday oficial: revelação nos stories + influs postando + campanha iFood (27 e 28/11)",
-   "d": "sex 27/11",
-   "p": "P0",
-   "tag": "ROB"
-  },
-  {
-   "t": "Escopo do Emeric como analista: definir e alinhar (agora focado na Temakeria)",
-   "d": "sex 27/11",
-   "p": "P0",
-   "tag": "S7"
-  },
-  {
-   "t": "Peças da Clarissa: aprovar com o Matheus uniformes, broches, pulseira à la carte e roleta (+ cartão do japonês) e passar o feedback pra Julia",
-   "d": "sex 27/11",
-   "p": "P0",
-   "tag": "OLV",
-   "c": "cs-olivers#239",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/239"
-  },
-  {
-   "t": "OLV Sushi: fechar a identidade visual com a Julia",
-   "d": "sex 27/11",
-   "p": "P0",
-   "tag": "OLV"
-  },
-  {
-   "t": "Duda: onboarding técnico (agente) com o Matheus + call com você pra fechar o calendário de dezembro da Øliver's + começar os conteúdos da Pizza de Rabanada (reels, stories, foto do cardápio, banners iFood, 99 e site)",
-   "d": "sex 27/11",
-   "p": "P0",
-   "tag": "OLV",
-   "n": "Confirmar com a operação se os insumos chegam nas lojas pro lançamento em 01/12. O Emeric fica fora dessa call.",
-   "c": "cs-olivers#264",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/264"
-  },
-  {
-   "t": "TikTok: passar o acesso pra Duda e subir a senha no 1Password",
-   "d": "sex 27/11",
-   "p": "P1",
-   "tag": "OLV"
-  },
-  {
-   "t": "Emeric: começa a Temakeria (calendário de dezembro, SushiTone, TikTok) + 30 min passando os cards da Øliver's pra Duda",
-   "d": "sex 27/11",
-   "p": "P1",
-   "tag": "TMK",
-   "c": "daily do Emeric",
-   "u": "https://dev-seven7.github.io/daily-emeric-theo/"
-  },
-  {
-   "t": "Iniciar conteúdos e edição dos produtos de Natal: Pizza de Rabanada, SushiTone e Ogro Bells",
-   "d": "sex 27/11",
-   "p": "P1",
-   "tag": "ROB"
-  },
-  {
-   "t": "Agendar o fim de semana das 3 marcas + story de domingo da Temakeria",
-   "d": "sex 27/11",
-   "p": "P1",
-   "tag": "ROB"
-  },
-  {
-   "t": "Réveillon Araruama: precificação fechada até segunda (Alline, Clarissa e Matheus) → criativos de fundo, LP e campanha na 1ª semana de dezembro",
-   "d": "até seg 30/11",
-   "p": "P0",
-   "tag": "OLV",
-   "c": "cs-olivers#160",
-   "u": "https://github.com/dev-seven7/cs-olivers/issues/160"
-  }
- ],
+ "amanha": [],
  "novidades": [],
  "vencendo": [],
  "proximos": [
@@ -485,12 +466,6 @@ const DADOS = {
    "tag": "OGRO",
    "c": "cs-ogro-steaks#14",
    "u": "https://github.com/dev-seven7/cs-ogro-steaks/issues/14"
-  },
-  {
-   "t": "Call com a Gabi pro contexto da Øliver's: remarcar (agora com a Duda)",
-   "d": "semana de 30/11",
-   "p": "P2",
-   "tag": "OLV"
   },
   {
    "t": "LED de Cabo Frio: enviar pra Katia a peça de reservas de fim de ano OU do Réveillon Araruama (roda a partir de 05/12)",
@@ -1714,6 +1689,28 @@ const DADOS = {
   }
  ],
  "feito": [
+  {
+   "t": "Call do time de 26/11 registrada na cs-rob-food#113 com o resumo por tópico e o checklist por pessoa",
+   "d": "26/11",
+   "tag": "ROB",
+   "c": "cs-rob-food#113",
+   "u": "https://github.com/dev-seven7/cs-rob-food/issues/113#issuecomment-7202271012"
+  },
+  {
+   "t": "Duda: links das 19 frentes da Øliver's no GitHub com status + aviso da auditoria de prazos",
+   "d": "26/11",
+   "tag": "OLV"
+  },
+  {
+   "t": "Mensagens pra gráfica (lote de cartões de retrovisor) e pro Matheus (fechamento Ogro SG) prontas",
+   "d": "26/11",
+   "tag": "OGRO"
+  },
+  {
+   "t": "Confirmado na call: 2.500 panfletos da Ogro, também nos pedidos da Øliver's e da Temakeria",
+   "d": "26/11",
+   "tag": "OGRO"
+  },
   {
    "t": "Duda (Eduarda) entra como analista da Øliver's em paralelo; o Emeric termina a Black da Øliver's e passa pra Temakeria. Mensagem pro Matheus e pro Emeric enviada",
    "d": "26/11",
@@ -3962,8 +3959,8 @@ const DADOS = {
   },
   {
    "emoji": "🏢",
-   "bloco": "Qui 26/11 · hoje",
-   "aberto": true,
+   "bloco": "Qui 26/11",
+   "aberto": false,
    "itens": [
     {
      "t": "26/11 · home office: acelerar a Black (sem presencial)",
@@ -3997,8 +3994,8 @@ const DADOS = {
   },
   {
    "emoji": "🖤",
-   "bloco": "Sex 27/11",
-   "aberto": false,
+   "bloco": "Sex 27/11 · hoje",
+   "aberto": true,
    "itens": [
     {
      "t": "27/11 · Black Friday oficial nas 3 marcas + iFood",
